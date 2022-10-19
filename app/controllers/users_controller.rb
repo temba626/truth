@@ -36,6 +36,6 @@ class UsersController < ApplicationController
     end
     private
     def parameters
-        params.permit(:name,:email,:username,:status,:cohort)
+        params.permit(:name,:email,:username,:cohort)
     end
 end

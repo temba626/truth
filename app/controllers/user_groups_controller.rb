@@ -13,6 +13,7 @@ class UserGroupsController < ApplicationController
     def create
         user_group = UserGroup.create(user_group_params)
         user = user_group.user
+        render json: user, status: :created
     end
 
     private
