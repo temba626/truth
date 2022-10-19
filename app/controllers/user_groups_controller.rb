@@ -1,5 +1,6 @@
 class UserGroupsController < ApplicationController
 
+
     def index
         render json: UserGroup.all
     end
