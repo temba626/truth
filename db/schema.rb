@@ -15,6 +15,22 @@ ActiveRecord::Schema.define(version: 2022_10_19_081823) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "admins", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "buyers", force: :cascade do |t|
+    t.string "username"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "groups", force: :cascade do |t|
     t.string "title"
     t.integer "status"
@@ -29,6 +45,24 @@ ActiveRecord::Schema.define(version: 2022_10_19_081823) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "product_name"
+    t.string "product_image_url"
+    t.string "product_description"
+    t.integer "quantity"
+    t.integer "price"
+    t.string "subscribe"
+    t.integer "admin_id"
+    t.integer "buyer_id"
+    t.integer "review_id"
+    t.integer "wishlist_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "comment"
+    t.integer "rating"
   end
 
   create_table "user_groups", force: :cascade do |t|
@@ -46,6 +80,13 @@ ActiveRecord::Schema.define(version: 2022_10_19_081823) do
     t.string "username"
     t.integer "status"
     t.string "cohort"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "wishlists", force: :cascade do |t|
+    t.string "product_name"
+    t.integer "buyer_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

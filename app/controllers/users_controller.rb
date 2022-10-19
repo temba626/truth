@@ -1,37 +1,37 @@
 class UsersController < ApplicationController
     
     def index
-        User=User.all
-        render json: User, status: :ok
+        user=User.all
+        render json: user, status: :ok
     end
     
     def show
-        User=User.find(params[:id])
+        user=User.find(params[:id])
         if User
-            render json: User
+            render json: user
         else
             render json: { error: "User not found" }, status: :not_found
         end
         
     end
     def create
-        User =User.create!(parameters)
-        render json: User, status: :created
+        user =User.create!(parameters)
+        render json: user, status: :created
         
     end
   
     def update
-        User=User.find(params[:id])
-        User.update(number: params(:number))
-        if User
-            render json: User
+        user=User.find(params[:id])
+        user.update(number: params(:number))
+        if user
+            render json: user
         else
             render json: { error: "User not found" }, status: :not_found
         end
     end
     def destroy
-        User=User.find(params[:id])
-        User.destroy
+        user=User.find(params[:id])
+        user.destroy
         head :no_content
     end
     private
