@@ -1,0 +1,157 @@
+.home_flex{
+    display: flex;
+}
+
+.home_top{
+    width: 100%;
+    height: 40px;
+    background-color: rgba(62, 47, 47, 0.71);
+    margin-top: 83px;
+}
+
+.inner_hf{
+    position: absolute;
+    top: 400px;
+    right: 150px;
+    color: black;
+    font-family: glory;
+    font-size: larger;
+}
+
+.htp{
+    font-size: medium;
+}
+
+.home_social{
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    padding: 3px;
+    background-color: rgb(56, 42, 42);
+    padding-bottom: 7px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.home_bottom {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(67, 32, 32, 0.1),rgb(67, 32, 32)), url(../Assets/images/tre.webp);
+    background-position: center;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.home_content{
+    position: absolute;
+    left: 100px;
+    top: 170px;
+}
+
+.home_content > h1{
+    text-transform: capitalize;
+    font-weight: bolder;
+    color: rgb(56, 42, 42);
+    font-size: 50px;
+    font-family: bebas neue;
+}
+
+.home_content > p{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(24, 22, 22);
+    font-family: glory;
+    margin-top: -10px;
+    background-color: rgba(114, 81, 81, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.home_btn{
+    margin-left: 109px;
+    margin-top: 460px;
+}
+
+.login{
+    color: white;
+    background-color: rgb(56, 42, 42);
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.signup{
+    width: 100px;
+    height: 35px;
+    border: 1px solid rgb(56, 42, 42);
+    border-radius: 16px;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: rgb(56, 42, 42);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* .nav{
+    list-style: none;
+    display: flex;
+    margin-top: 70px;
+    margin-right: 140px;
+    padding: 10px;
+    position: sticky;
+} */
+
+.nav{
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    list-style: none;
+    display: flex;
+    float: right;
+    padding-left: 50px;
+    background-color: rgba(62, 47, 47, 0.71);
+    margin-top: -10px;
+    padding-top: 5px;
+    padding-left: 800px;
+}
+
+.nav > li{
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: large;
+    cursor: pointer;
+    color: rgb(165, 165, 165);
+    border-radius: 12px;
+    font-family: glory;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
