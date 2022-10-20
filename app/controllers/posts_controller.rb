@@ -6,6 +6,7 @@ class PostsController < ApplicationController
         posts = Post.all 
         render json: posts
     end
+    
 
     # GET /posts/:id
     def show 
