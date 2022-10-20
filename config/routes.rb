@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :comments
   resources :user_groups, only: [:index, :show, :create]
   resources :groups
   resources :posts
