@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+    before_action :authorize
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     # GET /posts
     def index 
@@ -53,5 +54,8 @@ class PostsController < ApplicationController
 
     def update_params
         params.permit(:title)
+    end
+    def authorize
+        return render json: {errors: ["Unauthorized"]}, status: :unauthorized unless session[:user_id]
     end
 end
