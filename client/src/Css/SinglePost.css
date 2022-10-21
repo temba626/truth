@@ -1,0 +1,45 @@
+.intro{
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.title{
+    border-bottom: 1px solid brown;
+    font-family: glory;
+}
+
+.post{
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    left: 200px;
+}
+
+.body{
+    font-family: nunito;
+    color: black;
+}
+
+.right{
+    float: right;
+    margin-top: -35px;
+    margin-right: 20px;
+}
+
+b{
+    margin-right: 5px;
+    color: #f59e42;
+}
+

@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
             comment.update(update_params)
             render json: comment 
         else
-            render json: { error: "Comment not found" }, status: :not_found
+            render json: { errors: ["Comment not found"] }, status: :not_found
         end
     end
 
@@ -36,7 +36,7 @@ class CommentsController < ApplicationController
             comment.destroy
             head :no_content
         else
-            render json: { error: "Comment not found" }, status: :not_found
+            render json: { errors: ["Comment not found"] }, status: :not_found
         end
     end
 
