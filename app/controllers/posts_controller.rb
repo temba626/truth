@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :authorize
+    # before_action :authorize
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     # GET /posts
     def index 
@@ -7,6 +7,9 @@ class PostsController < ApplicationController
         render json: posts
     end
     
+    def new
+        render json: Post.last(3)
+    end
 
     # GET /posts/:id
     def show 
@@ -27,7 +30,7 @@ class PostsController < ApplicationController
             post.update(update_params)
             render json: post 
         else
-            render json: { error: "Post not found" }, status: :not_found
+            render json: { errors: ["Post not found"] }, status: :not_found
         end
     end
 
@@ -38,14 +41,14 @@ class PostsController < ApplicationController
             post.destroy
             head :no_content
         else
-            render json: { error: "Post not found" }, status: :not_found
+            render json: { errors: ["Post not found"] }, status: :not_found
         end
     end
 
     private
 
     def render_not_found_response
-        render json: { error: "Post not found" }, status: :not_found
+        render json: { errors: ["Post not found"] }, status: :not_found
     end
 
     def post_params

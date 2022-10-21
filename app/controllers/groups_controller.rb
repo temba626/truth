@@ -26,7 +26,7 @@ class GroupsController < ApplicationController
             group.update(update_params)
             render json: group 
         else
-            render json: { error: "Group not found" }, status: :not_found
+            render json: { errors: ["Group not found"] }, status: :not_found
         end
     end
 
@@ -37,14 +37,14 @@ class GroupsController < ApplicationController
             group.destroy
             head :no_content
         else
-            render json: { error: "Group not found" }, status: :not_found
+            render json: { errors: ["Group not found"] }, status: :not_found
         end
     end
 
     private
 
     def render_not_found_response
-        render json: { error: "Group not found" }, status: :not_found
+        render json: { errors: ["Group not found"] }, status: :not_found
     end
 
     def group_params

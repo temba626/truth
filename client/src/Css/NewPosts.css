@@ -1,0 +1,52 @@
+.img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.latest{
+    display: flex; 
+    height: 100px;
+    width: 250px;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+.latest_btn{
+    text-transform: capitalize;
+    outline: none;
+    background-color: #f59e42;
+    border: none;
+    width: 75px;
+    height: 35px;
+    margin-top: 70px;
+    position: absolute;
+    right: 10px;
+    border-radius: 15px;
+    
+}
+
+.latest_container{
+    margin-top: 60px;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    position: absolute;
+    right: 30px;
+    
+}
+
+.latest_p{
+    margin-top: -20px;
+    font-family: glory;
+}
+
+.latest_h3{
+    text-transform: capitalize;
+}

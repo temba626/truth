@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
             session[:user_id]=user.id
             render json: user , status: :ok
         else
-            render json: {error:"invalid username or password"}, status: :unauthorized
+            render json: {errors:["invalid username or password"]}, status: :unauthorized
         end
     end
     def destroy
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
     end
     private
     def render_not_found_response
-        render json: {error: "user not found"}
+        render json: {errors: ["user not found"]}
     end
 end

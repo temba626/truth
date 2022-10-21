@@ -10,7 +10,7 @@ class UsersController < ApplicationController
         end
     end
     def show
-        return render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
+        return render json: {errors: ["Not authorized"]}, status: :unauthorized unless session.include? :user_id
         user=User.find_by(id: session[:user_id])
         render json: user, status: :ok
       
@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:name,:email,:cohort,:username,:password, :password_confirmation)
+        params.permit(:name,:email,:cohort,:username,:password, :password_confirmation, :status, :image_url)
     end
     # def index
     #     user=User.all
