@@ -10,7 +10,6 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
@@ -19,7 +18,7 @@ function App() {
   }, []);
 	return (
 		<div className="App">
-      <Nav/>
+      <Nav user={user} setUser={setUser}/>
 			<Routes>
 				<Route exact path="/" element={<Home onLogin={setUser}/>} />
 				<Route exact path="/posts" element={<Posts />} />

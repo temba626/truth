@@ -1,0 +1,25 @@
+.loginForm > input{
+    width: 350px;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    background-color: lightgray;
+}
+
+.log_btn{
+    background-color: #f59e42;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+}
+
+.loginContainer{
+    background-color: rgba(11, 11, 69, 0.8);
+    height: 200px;
+    padding: 30px;
+    padding-top: 60px;
+    border-radius: 12px;
+}

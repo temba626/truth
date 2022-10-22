@@ -1,6 +1,21 @@
 .access{
     position: absolute;
     left: 500px;
-    top: 200px;
+    top: 120px;
     z-index: 16;
+}
+
+
+
+.access_btn{
+    color: #f59e42;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: medium;
+}
+
+ em {
+    color: rgb(4, 4, 29);
+    font-weight: bold;
 }
