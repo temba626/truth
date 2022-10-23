@@ -13,7 +13,8 @@
 }
 
 .title{
-    border-bottom: 1px solid brown;
+    border-bottom: 1px solid rgb(50, 157, 168);
+    color: rgb(50, 157, 168);
     font-family: glory;
 }
 

@@ -1,0 +1,18 @@
+.addPost{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(50, 157, 168, 0.8);
+    text-align: center;
+    padding-top: 100px;
+    height: 100vh;
+}
+
+.post_input{
+    width: 400px;
+    height: 60px;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid transparent;
+    margin-bottom: 10px;
+}
+

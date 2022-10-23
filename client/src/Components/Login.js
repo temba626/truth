@@ -13,8 +13,8 @@ function Login({onLogin}) {
       <>
         <LoginForm onLogin={onLogin} />
         <p>
-          Don't have an account? &nbsp;
-          <button color="secondary" onClick={() => setShowLogin(false)}>
+          <em>Don't have an account?</em>
+          <button className='access_btn' onClick={() => setShowLogin(false)}>
             Sign Up
           </button>
         </p>
@@ -23,8 +23,8 @@ function Login({onLogin}) {
       <>
         <SignUpForm onLogin={onLogin} />
         <p>
-          Already have an account? &nbsp;
-          <button color="secondary" onClick={() => setShowLogin(true)}>
+          <em>Already have an account?</em>
+          <button className='access_btn' onClick={() => setShowLogin(true)}>
             Log In
           </button>
         </p>

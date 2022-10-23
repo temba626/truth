@@ -1,0 +1,11 @@
+.btn{
+    font-size: large;
+    color: black;
+    background-color: #f59e42;
+    width: 160px;
+    height: 45px;
+    border: none;
+    border-radius: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+}

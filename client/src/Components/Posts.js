@@ -6,6 +6,7 @@ import { MdOutlineAdd } from "react-icons/md";
 
 function Posts() {
 	const [posts, setPosts] = useState([]);
+	const [query, setQuery] = useState('')
 
 	useEffect(() => {
 		fetch("/posts")
@@ -16,7 +17,7 @@ function Posts() {
 	}, []);
 
 	const addIconStyles = {
-		color: "black",
+		color: "white",
 	};
 	console.log(posts);
 	return (
@@ -30,6 +31,7 @@ function Posts() {
 							type="text"
 							id="search"
 							placeholder="search"
+							onChange={(e) => setQuery(e.target.value)}
 						/>
 					</div>
 					<button className="add_post">
@@ -37,7 +39,7 @@ function Posts() {
 					</button>
 				</div>
 				<div className="center">
-					{posts.map((post) => {
+					{posts.filter((post) => post.user.name.toLowerCase().includes(query)).map((post) => {
 						return (
 							<div key={post.id}>
 								<SinglePost

@@ -1,0 +1,139 @@
+.username{
+    padding-top: 100px;
+    color: black;
+    margin-top: -90px;
+    
+}
+
+.postTitle{
+    border-bottom: 1px solid rgba(13, 68, 100, 0.9);
+    color: rgba(13, 68, 100, 0.9);
+    text-transform: capitalize;
+}
+
+.account{
+    background-color: rgb(50, 157, 168);
+    width: 100%;
+    height: 100vh;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    margin-bottom: -10px;
+}
+
+.account_profile{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: -35px;
+    border: 3px solid white;
+    z-index: 5;
+}
+
+.div{
+    width: 240px;
+    height: 60px;
+    background-color: #f59e42;
+    /* position: absolute; */
+    top: -60px;
+    left: 100px;
+    z-index: 1;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.profile_top{
+    background-color: white;
+    width: 240px;
+    height: 200px;
+    position: absolute;
+    top: 130px;
+    text-align: center;
+    border-radius: 12px;
+    margin-left: 80px;
+}
+
+.account_posts{
+    color: white;
+    right: 300px;
+    margin-bottom: 20px;
+    width: 600px;
+    height: 200px;
+    background-color: white;
+    color: #18181a;
+    padding: 20px;
+    margin-right: 350px;
+    border-radius: 12px;
+}
+
+.account_adverts{
+    text-align: center;
+    width: 640px;
+    height: 260px;
+    background-color: white;
+    color: #18181a;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.account_adverts > h4 {
+    margin-top: 130px;
+    color: #f59e42;
+    text-transform: capitalize;
+}
+
+.account_center{
+    padding-top: 75px;
+}
+
+.account_right{
+    height: 90vh;
+    position: absolute;
+    width: 20%;
+    right: 20px;
+    border: 1px solid brown;
+}
+
+.account_add_post{
+    position: fixed;
+    margin-top: 340px;
+    width: 240px;
+    margin-left: 80px;
+    height: 40px;
+    border-radius: 12px;
+    font-size: large;
+    font-family: glory;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(13, 68, 100, 0.9);
+    border: none;
+    outline: none;
+}
+
+
+.account_search_bar{
+   position: fixed;
+   margin-left: -70px;
+   margin-top: 70px;
+   width: 350px;
+   border-radius: 10px;
+   outline: none;
+}
+
+.search_account{
+    background-color: white;
+}
+
+.more{
+    background-color: rgb(255, 255, 255);
+    width: 240px;
+    height: 170px;
+    position: absolute;
+    top: 390px;
+    text-align: center;
+    border-radius: 12px;
+    margin-left: 80px;
+    border: 1px solid #f59e42;
+}

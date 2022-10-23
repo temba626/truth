@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../Css/SignUp.css"
 
 function SignUpForm({ onLogin }) {
 	const [username, setUsername] = useState("");
@@ -46,10 +47,11 @@ function SignUpForm({ onLogin }) {
 	}
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit} className="signUpForm signUpContainer">
 				<input
 					type="text"
 					id="username"
+                    placeholder="username"
 					autoComplete="off"
 					value={username}
 					onChange={(e) => setUsername(e.target.value)}
@@ -59,6 +61,7 @@ function SignUpForm({ onLogin }) {
 				<input
 					type="password"
 					id="password"
+                    placeholder="password"
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
 					autoComplete="current-password"
@@ -68,6 +71,7 @@ function SignUpForm({ onLogin }) {
 				<input
 					type="password"
 					id="password_confirmation"
+                    placeholder="confirm password"
 					value={passwordConfirmation}
 					onChange={(e) => setPasswordConfirmation(e.target.value)}
 					autoComplete="current-password"
@@ -77,6 +81,7 @@ function SignUpForm({ onLogin }) {
 				<input
 					type="text"
 					id="imageUrl"
+                    placeholder="image url"
 					value={imageUrl}
 					onChange={(e) => setImageUrl(e.target.value)}
 				/>
@@ -85,6 +90,7 @@ function SignUpForm({ onLogin }) {
 					type="text"
 					id="name"
 					value={name}
+                    placeholder="name"
 					onChange={(e) => setName(e.target.value)}
 				/>
 				<br />
@@ -92,6 +98,7 @@ function SignUpForm({ onLogin }) {
 					type="text"
 					id="cohort"
 					value={cohort}
+                    placeholder="cohort"
 					onChange={(e) => setCohort(e.target.value)}
 				/>
 				<br />
@@ -99,17 +106,19 @@ function SignUpForm({ onLogin }) {
 					type="text"
 					id="email"
 					value={email}
+                    placeholder="email"
 					onChange={(e) => setEmail(e.target.value)}
 				/>
 				<br />
 				<input
 					type="text"
 					id="status"
+                    placeholder="status"
 					value={status}
 					onChange={(e) => setStatus(e.target.value)}
 				/>
 				<br />
-				<button type="submit">{isLoading ? "Loading..." : "Sign Up"}</button>
+				<button type="submit" className="sign_btn">{isLoading ? "Loading..." : "Sign Up"}</button>
 
 				<div className="errors">
 					{errors.map((err) => (

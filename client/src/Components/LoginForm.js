@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '../Css/LoginForm.css'
 
 function LoginForm({onLogin}) {
 	const [username, setUsername] = useState("");
@@ -21,7 +22,7 @@ function LoginForm({onLogin}) {
           setIsLoading(false);
           if (r.ok) {
             r.json().then((user) => onLogin(user));
-			navigate("/posts");
+			navigate("/account");
           } else {
             r.json().then((err) => setErrors(err.errors));
           }
@@ -29,11 +30,12 @@ function LoginForm({onLogin}) {
       }
       
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className="loginForm loginContainer">
 			<input
 				type="text"
 				id="username"
 				value={username}
+				placeholder="username"
 				onChange={(e) => setUsername(e.target.value)}
 			/>
 			<br/>
@@ -41,10 +43,11 @@ function LoginForm({onLogin}) {
 				type="password"
 				id="password"
 				value={password}
+				placeholder="pasword"
 				onChange={(e) => setPassword(e.target.value)}
 			/>
             <br/>
-			<button variant="fill" color="primary" type="submit">
+			<button variant="fill" className="log_btn" type="submit">
 				{isLoading ? "Loading..." : "Login"}
 			</button>
 			<div className="errors">
