@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    # before_action :authorize
+    before_action :authorize
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     # GET /posts
     def index 
@@ -19,7 +19,9 @@ class PostsController < ApplicationController
 
     # POST /posts
     def create 
-        post = Post.create(post_params)
+        user_id = session[:user_id]
+        user = User.find(user_id)
+        post = user.posts.create(post_params)
         render json: post, status: :created
     end
 
@@ -52,7 +54,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-        params.permit(:title, :content, :user_id  )
+        params.permit(:title, :content  )
     end
 
 

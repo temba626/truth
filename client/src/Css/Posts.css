@@ -1,5 +1,5 @@
 .container{
-    background: #18181a;
+    background: rgb(50, 157, 168);
     padding: 70px;
     display: flex;
 }
@@ -31,12 +31,14 @@
     height: 36px;
     width: 100px;
     border-radius: 7px;
-    border: 1px solid grey;
+    background-color: rgba(13, 68, 100, 0.9);
     outline: none;
+    border: none;
+    color: wheat;
 }
 
 .search{
-    width: 350px;
+    width: 330px;
     height: 35px;
     border-radius: 10px;
     border: 1px solid grey;

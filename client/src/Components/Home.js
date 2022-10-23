@@ -14,7 +14,7 @@ import { NavLink } from "react-router-dom";
 import Login from "./Login";
 
 function Home({onLogin}) {
-	const [show, setShow] = useState(true)
+	const [show, setShow] = useState(false)
 	const iconStyles = {
 		marginTop: "12px",
 		marginRight: "10px",
@@ -26,6 +26,10 @@ function Home({onLogin}) {
 		marginTop: "12px",
 		cursor: "pointer",
 	};
+
+function handleShow() {
+	setShow((show) => !show);
+}
 	return (
 		<div className="Home">
 			{show ?(
@@ -48,7 +52,7 @@ function Home({onLogin}) {
 				</div>
 
 				<div className="home_btn">
-					<button className="signup" onClick={() => setShow(true)}>signup</button>
+					<button className="signup" onClick={handleShow}>signup</button>
 					<button className="login">login</button>
 				</div>
 				<div className="home_top home_flex">

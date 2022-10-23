@@ -13,7 +13,7 @@ function NewPosts() {
 	return (
 		<div className="latest_container">
 			{posts.map((post) => {
-				return <div>
+				return <div key={post.id}>
                     <div className="latest">
 						<img src={post.user.image_url} className="img"/>
 						<div>

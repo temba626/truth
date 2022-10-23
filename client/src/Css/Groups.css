@@ -1,0 +1,20 @@
+.group_container{
+    width: 400px;
+    height: 100vh;
+    display: flex;
+}
+
+.all_groups > li {
+    color: black; 
+    padding-top: 100px;
+    
+}
+
+.group_form > input{
+background-color: black;
+color: white;
+}
+
+.group_form{
+    padding-top: 200px;
+}
