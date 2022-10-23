@@ -53,7 +53,7 @@ function handleShow() {
 
 				<div className="home_btn">
 					<button className="signup" onClick={handleShow}>signup</button>
-					<button className="login">login</button>
+					<button className="login" onClick={handleShow}>login</button>
 				</div>
 				<div className="home_top home_flex">
 					<div className=" inner_hf">

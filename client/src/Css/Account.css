@@ -88,6 +88,14 @@
     padding-top: 75px;
 }
 
+.account_right{
+    height: 90vh;
+    position: absolute;
+    width: 20%;
+    right: 20px;
+    border: 1px solid brown;
+}
+
 .account_add_post{
     position: fixed;
     margin-top: 340px;

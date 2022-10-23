@@ -62,7 +62,7 @@ function Account({ user, userPosts }) {
 			</div>
 
 			<div className="account_center">
-				<div>
+				<div className="vid">
 					{/* <h4>Advert area</h4> */}
 					<video  className="account_adverts" src="https://ak.picdn.net/shutterstock/videos/1043972062/preview/stock-footage-reeds-sway-on-wind-and-sun-rays-wild-grass-sway-from-wind-on-nature-sky-reed-in-meadow-sways-grass.webm" autoPlay loop muted />
 				</div>
@@ -83,6 +83,9 @@ function Account({ user, userPosts }) {
 							</div>
 						</div>
 					))}
+			</div>
+			<div className="account_right">
+
 			</div>
 		</div>
 	);
