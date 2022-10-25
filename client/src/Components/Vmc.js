@@ -20,6 +20,7 @@ const VMC = () => {
                                 people working in tech in Africa have the same earning potential as their <br/>
                                 global counterparts possessing the same aptitude and mindset. <br/>
                             </p>
+
                         </div>
                         <div className="col-md-4 text-center">
                             <h6>Our Mission</h6>
