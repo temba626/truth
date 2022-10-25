@@ -6,6 +6,7 @@ import Nav from "./Nav";
 import React, { useEffect, useState } from "react";
 import Groups from "./Groups";
 import Account from "./Account";
+import About from "./About";
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
 
   if (!user) return<>
   <Home onLogin={setUser} />;
-  </> 
+  </>
 
 	return (
 		<div className="App">
@@ -33,6 +34,7 @@ function App() {
 				<Route exact path="/" element={<Home onLogin={setUser}/>} />
 				<Route exact path="/posts" element={<Posts />} />
         <Route exact path="/groups" element={<Groups />} />
+        <Route exact path="/about" element={<About />} />
         <Route exact path="/account" element={<Account user={user} />} />
 			</Routes>
 		</div>
