@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+    before_action :authorize_request, except: :create
+    # before_action :find_user, except: %i[create index]
 
     def index
         user=User.all
@@ -15,26 +17,31 @@ class UsersController < ApplicationController
          end
     end
     
-    def create
-        user=User.create(user_params)
-        if user.valid?
-            session[:user_id]=user.id
-            render json: user, status: :created
-        else
-            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
-        end
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      render json: @user, status: :created
+    else
+      render json: { errors: @user.errors.full_messages },
+             status: :unprocessable_entity
     end
-    def show
-        return render json: {errors: ["Not authorized"]}, status: :unauthorized unless session.include? :user_id
-        user=User.find_by(id: session[:user_id])
-        render json: user, status: :ok
+  end
+
+    # def show
+    #     render json: @user, status: :ok
       
-    end
+    # end
     private
 
     def user_params
         params.permit(:name,:email,:cohort,:username,:password, :password_confirmation, :status, :image_url)
     end
+
+    # def find_user
+    #     @user = User.find_by_username!(params[:_username])
+    #     rescue ActiveRecord::RecordNotFound
+    #       render json: { errors: 'User not found' }, status: :not_found
+    #   end
     # def index
     #     user=User.all
     #     render json: user, status: :ok

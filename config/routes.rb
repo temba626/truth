@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "/post", to: "posts#new"
 
   post "/signup", to: "users#create"
-  get "/me", to: "users#show"
+  get "/me/:id", to: "users#show"
 
   get "/users", to: "users#index"
 
