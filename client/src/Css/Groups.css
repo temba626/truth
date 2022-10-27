@@ -15,6 +15,13 @@ background-color: black;
 color: white;
 }
 
-.group_form{
+.groupForm{
     padding-top: 200px;
+}
+
+.messages{
+    position: absolute;
+    left: 300px;
+    top: 400px;
+    height: 700px;
 }

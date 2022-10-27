@@ -5,6 +5,7 @@
     text-align: center;
     padding-top: 100px;
     height: 100vh;
+    z-index: 5;
 }
 
 .post_input{

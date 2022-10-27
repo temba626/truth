@@ -16,7 +16,7 @@ function NewPosts() {
 				return <div key={post.id}>
                     <div className="latest">
 						<img src={post.user.image_url} className="img"/>
-						<div>
+						<div className="H3p">
 							<h5 className="latest_h3">{post.title}</h5>
 							<p className="latest_p">{post.content}</p>
 						</div>

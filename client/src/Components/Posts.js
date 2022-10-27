@@ -17,9 +17,14 @@ function Posts() {
 	}, []);
 
 	const addIconStyles = {
-		color: "white",
+		color: "rgb(23, 27, 18)",
 	};
 	console.log(posts);
+
+	function handleDeleteItem(deletedItem) {
+		const updatedItems = posts.filter((item) => item.id !== deletedItem.id);
+		setPosts(updatedItems);
+	  }
 	return (
 		<div className="container">
 			<div className="left"></div>
@@ -43,6 +48,10 @@ function Posts() {
 						return (
 							<div key={post.id}>
 								<SinglePost
+								 onDelete={handleDeleteItem}
+								 setPosts={setPosts}
+								 post={post}
+								 id={post.id}
 									title={post.title}
 									image={post.user.image_url}
 									time={post.created_at}

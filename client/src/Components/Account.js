@@ -15,10 +15,12 @@ function Account({ user, userPosts }) {
 	}
 
 	const addIconStyles = {
-		color: "white",
+		color: "rgb(23, 27, 18)",
 	};
 
-	console.log(created_at);
+
+
+	console.log(user);
 	return (
 		<div className="account">
 			<div className="account_left">
@@ -47,7 +49,7 @@ function Account({ user, userPosts }) {
 
 				<div className="profile_bottom">
 					<button className="account_add_post" onClick={handleShow}>
-						<MdOutlineAdd style={addIconStyles} size="1.2em" /> Post
+					   	Add Post
 					</button>
 				</div>
 
@@ -83,9 +85,6 @@ function Account({ user, userPosts }) {
 							</div>
 						</div>
 					))}
-			</div>
-			<div className="account_right">
-
 			</div>
 		</div>
 	);
