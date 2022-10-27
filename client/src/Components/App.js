@@ -35,7 +35,7 @@ function App() {
 			<Routes>
 				<Route exact path="/" element={<Home onLogin={setUser}/>} />
 				<Route exact path="/posts" element={<Posts />} />
-        <Route exact path="/funds/:id" element={<ChatRoom />} />
+        <Route exact path='/funds/:id' element={<ChatRoom user={user}/>} />
         <Route exact path="/groups" element={<Groups />} />
         <Route exact path="/account" element={<Account user={user} />} />
 			</Routes>

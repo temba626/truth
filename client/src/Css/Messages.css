@@ -1,0 +1,23 @@
+.sms_input{
+    width: 850px;
+    height: 30px;
+    border: 1px solid lightgray;
+    background-color: lightgrey;
+    outline: none;
+}
+
+.send{
+    width: 47px;
+    height: 32px;
+    border: 1px solid lightgray;
+    background-color: rgba(121, 120, 120, 0.8);
+}
+
+.send_sms{
+    display: flex;
+    width: 70%;
+    position: absolute;
+    right: 100px;
+    bottom: 0px;
+    position: fixed;
+}
