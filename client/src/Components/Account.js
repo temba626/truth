@@ -1,8 +1,12 @@
-import React, { useState } from "react";
 import "../Css/Account.css";
+
+import React, { useState } from "react";
+
+import AddPost from "./AddPost";
+import Admin from "./Admin";
 import { FaComments } from "react-icons/fa";
 import { MdOutlineAdd } from "react-icons/md";
-import AddPost from "./AddPost";
+import { Navigate } from "react-router-dom";
 
 function Account({ user, userPosts }) {
 	const [show, setShow] = useState(false);
@@ -12,6 +16,7 @@ function Account({ user, userPosts }) {
 
 	function handleShow() {
 		setShow((show) => !show);
+				
 	}
 
 	const addIconStyles = {
@@ -52,6 +57,7 @@ function Account({ user, userPosts }) {
 					   	Add Post
 					</button>
 				</div>
+				
 
 				{show ? <AddPost onClick={handleShow} /> : null}
 

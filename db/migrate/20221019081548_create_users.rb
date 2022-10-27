@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :email
       t.string :username
-      t.integer :status
+      t.string :status,inclusion: ["normal","admin"], null:false,default: "normal"
       t.string :cohort
 
       t.timestamps

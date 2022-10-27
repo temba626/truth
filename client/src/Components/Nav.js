@@ -1,6 +1,7 @@
-import React from "react";
 import "../Css/Nav.css"
+
 import { NavLink } from "react-router-dom"
+import React from "react";
 import {useNavigate} from "react-router-dom"
 
 function Nav({user, setUser}) {
@@ -35,6 +36,9 @@ function Nav({user, setUser}) {
 				<NavLink className="li" to="/about" style={{ textDecoration: "none" }}>
 					about
 				</NavLink>
+				{/* <NavLink className="li" to="/admin" style={{ textDecoration: "none" }}>
+					admin
+				</NavLink> */}
 				<NavLink
 					className="li"
 					to="contacts"

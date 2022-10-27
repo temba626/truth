@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
-import SinglePost from "./SinglePost";
 import "../Css/Posts.css";
-import NewPosts from "./NewPosts";
+
+import React, { useEffect, useState } from "react";
+
 import { MdOutlineAdd } from "react-icons/md";
+import NewPosts from "./NewPosts";
+import SinglePost from "./SinglePost";
 
 function Posts() {
 	const [posts, setPosts] = useState([]);
@@ -44,7 +46,8 @@ function Posts() {
 					</button>
 				</div>
 				<div className="center">
-					{posts.filter((post) => post.user.name.toLowerCase().includes(query)).map((post) => {
+					{/* .filter((post) => post.user.name.toLowerCase().includes(query)) */}
+					{posts.map((post) => {
 						return (
 							<div key={post.id}>
 								<SinglePost

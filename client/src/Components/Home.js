@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { BsTelephoneFill } from "react-icons/bs";
-import { SiMinutemailer } from "react-icons/si";
-import { MdLocationPin } from "react-icons/md";
+import "../Css/Home.css";
+
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -9,12 +7,15 @@ import {
 	FaTwitter,
 	FaYoutube,
 } from "react-icons/fa";
-import "../Css/Home.css";
-import { NavLink } from "react-router-dom";
-import Login from "./Login";
-
+import { NavLink, Navigate } from "react-router-dom";
+import React, { useState } from "react";
 
 import About from "./About";
+import Admin from "./Admin";
+import { BsTelephoneFill } from "react-icons/bs";
+import Login from "./Login";
+import { MdLocationPin } from "react-icons/md";
+import { SiMinutemailer } from "react-icons/si";
 
 function Home({onLogin}) {
 	const [show, setShow] = useState(false)
@@ -33,6 +34,7 @@ function Home({onLogin}) {
 function handleShow() {
 	setShow((show) => !show);
 }
+
 	return (
 		<div>
 			<div className="Home">
@@ -56,8 +58,10 @@ function handleShow() {
 					</div>
 
 					<div className="home_btn">
-						<button className="signup" onClick={handleShow}>signup</button>
+						<button className="signup" onClick={handleShow}>Signup</button>
 						<button className="login" onClick={handleShow}>login</button>
+						
+						
 					</div>
 					<div className="home_top home_flex">
 						<div className=" inner_hf">

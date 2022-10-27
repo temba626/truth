@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_26_104214) do
+ActiveRecord::Schema.define(version: 2022_10_22_064931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,8 +30,6 @@ ActiveRecord::Schema.define(version: 2022_10_26_104214) do
     t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -64,19 +62,18 @@ ActiveRecord::Schema.define(version: 2022_10_26_104214) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "email"
     t.string "username"
-    t.integer "status"
+    t.string "status", default: "normal", null: false
     t.string "cohort"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "image_url"
-    t.string "email"
   end
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
-  add_foreign_key "groups", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
   add_foreign_key "posts", "users"

@@ -1,12 +1,15 @@
-import { Routes, Route } from "react-router-dom";
 import "../Css/App.css";
-import Home from "./Home";
-import Posts from "./Posts";
-import Nav from "./Nav";
+
 import React, { useEffect, useState } from "react";
-import Groups from "./Groups";
+import { Route, Routes } from "react-router-dom";
+
 import Account from "./Account";
+import Admin from "./Admin";
 import ChatRoom from "./ChatRoom";
+import Groups from "./Groups";
+import Home from "./Home";
+import Nav from "./Nav";
+import Posts from "./Posts";
 
 function App() {
 
@@ -37,6 +40,7 @@ function App() {
 				<Route exact path="/posts" element={<Posts />} />
         <Route exact path="/funds/:id" element={<ChatRoom />} />
         <Route exact path="/groups" element={<Groups />} />
+        <Route exact path="/admin" element={<Admin/>} />
         <Route exact path="/account" element={<Account user={user} />} />
 			</Routes>
 		</div>

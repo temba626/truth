@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity_response
 
     def index
-      render json: User.all, status: :ok
+    #   render json: User.all, status: :ok
+      render json: User.where.not(status: "admin")
   end
 
   def show
@@ -24,8 +25,9 @@ class UsersController < ApplicationController
 
   def create 
       user = User.create!(user_params)
+      user.update(status:"normal")
       if user.valid?
-          session[:user_id] = user.id
+         session[:user_id] = user.id
           render json: user, status: :created
       else
           render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
@@ -34,7 +36,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-      params.permit :username, :password, :email, :password_confirmation
+      params.permit :username,:name,:cohort,:image_url, :password, :email, :password_confirmation
   end
 
   def not_found_response
