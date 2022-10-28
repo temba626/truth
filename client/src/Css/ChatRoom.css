@@ -9,3 +9,35 @@
 .chat_li{
     padding-top: 100px;
 }
+
+.chatroom{
+    padding-top: 100px;
+    display: inline-block;
+    width: 1300px;
+    height: 75vh;;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.test > li{
+    list-style: none;
+}
+
+.chat_pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.message_area{
+    margin-left: 313px;
+    width: 890px;
+    border: 1px solid lightgray;
+    padding-bottom: 3px;
+}
+
+.user_p{
+    position: fixed;
+    width: 100%;
+}
+

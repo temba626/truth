@@ -57,15 +57,16 @@ function Groups() {
 						<div key={item.id}>
 						<div style={{display: "flex"}}>
 							<Link to={`/funds/${item.id}`}>{item.title}</Link>
-							<div className="messages">
+							{/* <div className="messages">
 								{item.messages.map((item) => {
 									return <div key={item.id}>
                                         <li>{item.name}</li>
 									</div>
 								})}
-							</div>
+							</div> */}
+							
 						</div>
-						<ChatRoom id={item.id}/>
+						
 						</div>
 						
 

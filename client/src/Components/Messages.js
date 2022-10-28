@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import '../Css/Messages.css'
+import { AiOutlineSend } from 'react-icons/ai'
 
 function Messages({id, setData, messages}) {
 
@@ -27,16 +29,16 @@ console.log(id)
     }
   return (
     <div>
-         <form onSubmit={handleSubmit} className="group_form">
+         <form onSubmit={handleSubmit} className="send_sms">
                 <input
-                    className="post_input"
+                    className="sms_input"
                     type="text"
                     value={newObj.content}
                     name="content"
                     placeholder="message"
                     onChange={handleChange}
                 />
-                <button type="submit">submit</button>
+                <button type="submit" className='send'><AiOutlineSend size="1.4em"/></button>
             </form>
     </div>
   )
