@@ -10,6 +10,7 @@ class GroupsController < ApplicationController
     # GET /groups/:id
     def show 
         group = Group.find(params[:id])
+        
         render json: group 
     end
 

@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2022_10_22_064931) do
     t.string "name"
     t.string "email"
     t.string "username"
-    t.integer "status"
+    t.string "status", default: "normal", null: false
     t.string "cohort"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

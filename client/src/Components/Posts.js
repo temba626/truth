@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
-import SinglePost from "./SinglePost";
 import "../Css/Posts.css";
-import NewPosts from "./NewPosts";
+
+import React, { useEffect, useState } from "react";
+
 import { MdOutlineAdd } from "react-icons/md";
+import NewPosts from "./NewPosts";
+import SinglePost from "./SinglePost";
 
 function Posts() {
 	const [posts, setPosts] = useState([]);
@@ -17,9 +19,14 @@ function Posts() {
 	}, []);
 
 	const addIconStyles = {
-		color: "white",
+		color: "rgb(23, 27, 18)",
 	};
 	console.log(posts);
+
+	function handleDeleteItem(deletedItem) {
+		const updatedItems = posts.filter((item) => item.id !== deletedItem.id);
+		setPosts(updatedItems);
+	  }
 	return (
 		<div className="container">
 			<div className="left"></div>
@@ -39,10 +46,15 @@ function Posts() {
 					</button>
 				</div>
 				<div className="center">
-					{posts.filter((post) => post.user.name.toLowerCase().includes(query)).map((post) => {
+					{/* .filter((post) => post.user.name.toLowerCase().includes(query)) */}
+					{posts.map((post) => {
 						return (
 							<div key={post.id}>
 								<SinglePost
+								 onDelete={handleDeleteItem}
+								 setPosts={setPosts}
+								 post={post}
+								 id={post.id}
 									title={post.title}
 									image={post.user.image_url}
 									time={post.created_at}

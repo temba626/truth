@@ -12,11 +12,11 @@
 }
 
 .account{
-    background-color: rgb(50, 157, 168);
+    background-color: rgb(23, 27, 18);
     width: 100%;
     height: 100vh;
     margin-top: 0px;
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
     overflow: auto;
     margin-bottom: -10px;
@@ -34,7 +34,7 @@
 .div{
     width: 240px;
     height: 60px;
-    background-color: #f59e42;
+    background-color: rgb(197, 211, 204);
     /* position: absolute; */
     top: -60px;
     left: 100px;
@@ -60,7 +60,7 @@
     margin-bottom: 20px;
     width: 600px;
     height: 200px;
-    background-color: white;
+    background-color: rgb(197, 211, 204);
     color: #18181a;
     padding: 20px;
     margin-right: 350px;
@@ -71,11 +71,12 @@
     text-align: center;
     width: 640px;
     height: 260px;
-    background-color: white;
+    background-color: lightgray;
     color: #18181a;
     margin-bottom: 20px;
     border-radius: 5px;
-    object-fit: cover;
+    padding: 10px 0;
+    object-fit: contain;
 }
 
 .account_adverts > h4 {
@@ -86,6 +87,7 @@
 
 .account_center{
     padding-top: 75px;
+    margin-left: 400px;
 }
 
 .account_right{
@@ -99,15 +101,15 @@
 .account_add_post{
     position: fixed;
     margin-top: 340px;
-    width: 240px;
-    margin-left: 80px;
+    width: 180px;
+    margin-left: 110px;
     height: 40px;
     border-radius: 12px;
     font-size: large;
     font-family: glory;
     font-weight: bold;
-    color: white;
-    background-color: rgba(13, 68, 100, 0.9);
+    color: rgb(23, 27, 18);
+    background-color: rgb(197, 211, 204);
     border: none;
     outline: none;
 }
@@ -136,4 +138,5 @@
     border-radius: 12px;
     margin-left: 80px;
     border: 1px solid #f59e42;
+    z-index: 1;
 }

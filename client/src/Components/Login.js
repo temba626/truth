@@ -1,7 +1,9 @@
+import "../Css/Login.css"
+
 import React, { useState } from 'react'
+
 import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
-import "../Css/Login.css"
 
 function Login({onLogin}) {
 
@@ -12,12 +14,15 @@ function Login({onLogin}) {
     {showLogin ? (
       <>
         <LoginForm onLogin={onLogin} />
+        <br/>
         <p>
+         
           <em>Don't have an account?</em>
           <button className='access_btn' onClick={() => setShowLogin(false)}>
             Sign Up
           </button>
         </p>
+        <br/>
       </>
     ) : (
       <>

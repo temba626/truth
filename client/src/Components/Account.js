@@ -1,8 +1,12 @@
-import React, { useState } from "react";
 import "../Css/Account.css";
+
+import React, { useState } from "react";
+
+import AddPost from "./AddPost";
+import Admin from "./Admin";
 import { FaComments } from "react-icons/fa";
 import { MdOutlineAdd } from "react-icons/md";
-import AddPost from "./AddPost";
+import { Navigate } from "react-router-dom";
 
 function Account({ user, userPosts }) {
 	const [show, setShow] = useState(false);
@@ -12,13 +16,16 @@ function Account({ user, userPosts }) {
 
 	function handleShow() {
 		setShow((show) => !show);
+				
 	}
 
 	const addIconStyles = {
-		color: "white",
+		color: "rgb(23, 27, 18)",
 	};
 
-	console.log(created_at);
+
+
+	console.log(user);
 	return (
 		<div className="account">
 			<div className="account_left">
@@ -47,9 +54,10 @@ function Account({ user, userPosts }) {
 
 				<div className="profile_bottom">
 					<button className="account_add_post" onClick={handleShow}>
-						<MdOutlineAdd style={addIconStyles} size="1.2em" /> Post
+					   	Add Post
 					</button>
 				</div>
+				
 
 				{show ? <AddPost onClick={handleShow} /> : null}
 
@@ -83,9 +91,6 @@ function Account({ user, userPosts }) {
 							</div>
 						</div>
 					))}
-			</div>
-			<div className="account_right">
-
 			</div>
 		</div>
 	);

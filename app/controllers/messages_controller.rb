@@ -17,8 +17,8 @@ class MessagesController < ApplicationController
   def create
     user_id = session[:user_id]
     user = User.find(user_id)
-    group = user.groups.find(params[:id])
-    message = group.messages.create!(message_params)
+    group = Group.find(params[:group_id])
+    message = user.messages.create!(message_params)
     render json: message, status: :created
 end
 
@@ -44,6 +44,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def message_params
-      params.require(:message).permit(:content)
+      params.permit(:content, :user_id, :group_id)
     end
 end

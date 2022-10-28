@@ -2,7 +2,15 @@ import React from "react";
 import "../Css/SinglePost.css"
 import { FaComments } from "react-icons/fa"
 
-function SinglePost({ image, time, author, content, comments, title }) {
+function SinglePost({ onDelete, update, id, post, image, time, author, content, comments, title  }) {
+	function handleDeleteClick(){
+        
+		fetch(`/posts${id}`, {
+			method: "DELETE",
+		  })
+			.then((r) => r.json())
+			.then(() => onDelete(post));
+    }
 	return (
 		<div className="post_container">
 			<div className="post">
@@ -18,6 +26,8 @@ function SinglePost({ image, time, author, content, comments, title }) {
 						<p>{time}</p>
 						<p className="right"><b>{comments}</b><FaComments size="1.4em"/></p>
 					</div>
+					<button onClick={handleDeleteClick}>X</button>
+					<button>edit</button>
 				</div>
 			</div>
 		</div>
