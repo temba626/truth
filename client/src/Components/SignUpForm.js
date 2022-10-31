@@ -7,7 +7,7 @@ function SignUpForm({ onLogin }) {
 	const [password, setPassword] = useState("");
 	const [passwordConfirmation, setPasswordConfirmation] = useState("");
 	const [imageUrl, setImageUrl] = useState("");
-	const [status, setStatus] = useState(0);
+	const [status, setStatus] = useState('');
 	const [cohort, setCohort] = useState("");
 	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");

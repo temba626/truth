@@ -4,4 +4,5 @@ class UserSerializer < ActiveModel::Serializer
   has_many :messages
   has_many :posts
   has_many :comments
+  belongs_to :groups
 end

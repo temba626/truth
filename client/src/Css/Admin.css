@@ -1,0 +1,122 @@
+.panel{
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 100px;
+    display: flex;
+   
+}
+.adm_btn{
+    height: fit-content;
+    width: fit-content;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: small;
+    padding: 0;
+}
+
+.adm_btn:hover{
+    color: #c60021;
+    border-bottom: 1px solid #c60021;
+}
+
+.adm_image{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+table{
+    border: 1px solid lightgray;
+    height: 50px;
+}
+
+thead{
+    color: white;
+    background-color: #0c1c45;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: small;
+    font-family: sans-serif;
+}
+th{
+    margin-bottom: 50px;
+}
+
+tbody:nth-child(even) {
+    background-color: #f2f2f2;
+    border-spacing: 10px;
+}
+
+.header{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    color: #0c1c45;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.td{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+
+.users_box{
+    padding-top: 60px;
+    margin-bottom: 15px;
+    color: white;
+    text-align: center;
+    width: 200px;
+    height: 150px;
+    background-color: #0c1c45;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+.adm_right{
+    margin-left: 200px;
+    width: 900px;
+}
+
+.adm_nav{
+    display: flex;
+}
+
+.panel >.left{
+    border: 1px solid #0c1c45;
+    margin-left: -50px;
+    margin-top: -40px;
+    width: 200px;
+    border-top-right-radius: 15px;
+    margin-right: -50px;
+    height: 100vh;
+    position: fixed;
+}
+
+.left > h4{
+    background-color: #0c1c45;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 300;
+    font-family: sans-serif;
+    padding: 5px;
+    border-top-right-radius: 15px;
+}
+
+.left > ul > li{
+    list-style: none;
+    text-transform: capitalize;
+    margin-left: -32px;
+    padding-top: 10px;
+    border-bottom: 1px solid #0c1c45;
+    height: fit-content;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.adm_add_post{
+    margin-left: -50px;
+    margin-top: -30px;
+}

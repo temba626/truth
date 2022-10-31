@@ -14,7 +14,7 @@ function NewPosts() {
 		<div className="latest_container">
 			{posts.map((post) => {
 				return <div key={post.id}>
-                    <div className="latest">
+                    <div className="latest_post">
 						<img src={post.user.image_url} className="img"/>
 						<div className="H3p">
 							<h5 className="latest_h3">{post.title}</h5>

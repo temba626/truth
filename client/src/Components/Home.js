@@ -1,12 +1,4 @@
 import "../Css/Home.css";
-
-import {
-	FaFacebookF,
-	FaInstagram,
-	FaLinkedinIn,
-	FaTwitter,
-	FaYoutube,
-} from "react-icons/fa";
 import { NavLink, Navigate } from "react-router-dom";
 import React, { useState } from "react";
 
@@ -25,18 +17,12 @@ function Home({onLogin}) {
 		marginLeft: "10px",
 	};
 
-	const socialStyles = {
-		paddingLeft: "10px",
-		marginTop: "12px",
-		cursor: "pointer",
-	};
-
 function handleShow() {
 	setShow((show) => !show);
 }
 
 	return (
-		<div>
+		
 			<div className="Home">
 				{show ?(
 				<Login onLogin={onLogin}/>
@@ -80,21 +66,10 @@ function handleShow() {
 								<p className="htp">Ngong Lane Plaza</p>
 							</div>
 						</div>
-						<div className="home_social">
-							<FaFacebookF size="0.9em" color="blue" style={socialStyles} />
-							<br />
-							<FaInstagram size="0.9em" color="orange" style={socialStyles} />
-							<br />
-							<FaLinkedinIn size="0.9em" color="blue" style={socialStyles} />
-							<br />
-							<FaTwitter size="0.9em" color="skyBlue" style={socialStyles} />
-							<br />
-							<FaYoutube size="0.9em" color="red" style={socialStyles} />
-						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		
 	);
 }
 

@@ -10,6 +10,7 @@ import Groups from "./Groups";
 import Home from "./Home";
 import Nav from "./Nav";
 import Posts from "./Posts";
+import Courier from "./Courier";
 
 function App() {
 
@@ -40,8 +41,9 @@ function App() {
 				<Route exact path="/posts" element={<Posts />} />
         <Route exact path='/funds/:id' element={<ChatRoom user={user}/>} />
         <Route exact path="/groups" element={<Groups />} />
-        <Route exact path="/admin" element={<Admin/>} />
+        <Route exact path="/admin" element={<Admin user={user}/>} />
         <Route exact path="/account" element={<Account user={user} />} />
+        <Route exact path="/about" element={<Courier/>} />
 			</Routes>
 		</div>
 	);
