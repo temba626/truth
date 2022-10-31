@@ -1,14 +1,17 @@
 import "../Css/Admin.css";
-import AddPost from "./AddPost";
 
 import { React, useEffect, useState } from "react";
+
+import AddPost from "./AddPost";
+import { useNavigate } from "react-router-dom";
 
 function Admin({ user }) {
 	const [users, setusers] = useState([]);
 	const [posts, setPosts] = useState([]);
 	const [show, setShow] = useState(false);
 	const [ads, setAds] = useState([]);
-	const [errors, setErrors] = useState([])
+	const [errors, setErrors] = useState([]);
+	const navigate = useNavigate();
 
     function handleSubmitImage(e) {
 		e.preventDefault();
@@ -52,6 +55,10 @@ function Admin({ user }) {
 	function handleShow() {
 		setShow((show) => !show);
 	}
+	function handlecreate() {
+		navigate("/create_private_group");
+		
+	}
 
 	return (
 		<div className="panel">
@@ -63,12 +70,12 @@ function Admin({ user }) {
 			<div className="left">
 				<h4>manage</h4>
 				<ul>
-					<li>advert</li>
-					<li>fundraiser</li>
-					<li>private group</li>
-					<li>delete group</li>
-					<li>update user</li>
-					<li onClick={handleShow}>add post</li>
+					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}>advert</button></li>
+					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}>fundraiser</button></li>
+					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}} onClick={handlecreate}>create private group</button></li>
+					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}>delete group</button></li>
+					<li> <button type="submit" class="btn btn-primary" style={{width:"100%"}}>update user</button></li>
+					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}  onClick={handleShow}>add post</button></li>
 				</ul>
 			</div>
 			<div className="adm_right">

@@ -6,11 +6,12 @@ import { Route, Routes } from "react-router-dom";
 import Account from "./Account";
 import Admin from "./Admin";
 import ChatRoom from "./ChatRoom";
+import Courier from "./Courier";
+import CreatePrivateGroup from "./CreatePrivateGroup";
 import Groups from "./Groups";
 import Home from "./Home";
 import Nav from "./Nav";
 import Posts from "./Posts";
-import Courier from "./Courier";
 
 function App() {
 
@@ -44,6 +45,8 @@ function App() {
         <Route exact path="/admin" element={<Admin user={user}/>} />
         <Route exact path="/account" element={<Account user={user} />} />
         <Route exact path="/about" element={<Courier/>} />
+        <Route exact path="/create_private_group" element={<CreatePrivateGroup/>} />
+       
 			</Routes>
 		</div>
 	);

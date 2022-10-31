@@ -112,9 +112,11 @@ tbody:nth-child(even) {
     padding-top: 10px;
     border-bottom: 1px solid #0c1c45;
     height: fit-content;
+   
     transition: 1s;
     cursor: pointer;
 }
+
 
 .adm_add_post{
     margin-left: -50px;
