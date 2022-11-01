@@ -9,9 +9,10 @@
 .postImg{
     background-position: center;
     background-size: cover;
-    width: 650px;
+    width: 750px;
     height: 420px;
     opacity: 0.9;
+    border-radius: 5px;
 }
 
 .intro > h3{

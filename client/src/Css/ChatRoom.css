@@ -14,19 +14,23 @@
     position: absolute;
     right: 0;
     width: 230px;
-    border: 2px solid lightgrey;
+    border: 2px solid #0c1c45;
     height: 100vh;
     top: 60px;
     position: fixed;
 }
 
+#all_users{
+    position: absolute;
+}
+
 .all_users > h5{
-    background-color: lightgrey;
-    color: #0c1c45;
+    background-color: #0c1c45;
+    color: white;
     font-weight: 300;
     text-transform: capitalize;
     font-size: medium;
-    padding: 5px;
+    padding: 11.2px;
 }
 
 .side_users{
@@ -68,6 +72,28 @@
     height: 400px;
 }
 
+.messageSearch{
+    position: absolute;
+    top: 60px;
+    background-color: #0c1c45;
+    height: 44px;
+    width: 816px;
+    padding: 5px;
+    position: fixed;
+    right: 230px;
+    padding-left: 35px;
+}
+
+.messageSearch > input{
+    background-color: lightgray;
+    height: 30px;
+    width: 400px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
 .user_p{
     position: fixed;
     width: 305px;
@@ -98,6 +124,7 @@
 .room_name{
     background-color: #0c1c45;
     color: white;
+    padding: 5px;
 }
 
 #cbody{
