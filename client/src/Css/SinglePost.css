@@ -1,31 +1,83 @@
 .intro{
     display: flex;
-    justify-content: space-between;
-    width: 100px;
+    width: 100%;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.postImg{
+    background-position: center;
+    background-size: cover;
+    width: 650px;
+    height: 420px;
+    opacity: 0.9;
 }
 
 .intro > h3{
-    margin: 20px;
+margin-top: 12px;
+font-size: medium;
+font-family: Arial, Helvetica, sans-serif;
+padding: 5px;
+
 }
 
-.img{
-    width: 30px;
-    height: 30px;
+.sp_img{
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 10px;
     margin-top: 15px;
 }
 
-.title{
-    border-bottom: 1px solid rgb(50, 157, 168);
-    color: rgb(50, 157, 168);
-    font-family: glory;
+.sumUp{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.sumUP_info{
+    margin-top: 20px;
+}
+
+.bGrey{
+    color: rgb(165, 164, 164);
+    border: none;
+    font-weight: 400;
+}
+
+.dup_btn{
+    display: flex;
+}
+
+.inner_dup_btn{
+    width:70px;
+    border: none;
+    outline: none;
+    height: 30px;
+    border-radius:4px;
     text-transform: capitalize;
 }
 
+.edit{
+    background-color: #E3E3E3;
+    color: #c60021;
+}
+
+.delete{
+    background-color: #c60021;
+    color: #E3E3E3;
+}
+
+.title{
+    color: black;
+    font-family: serif;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
 .post{
-    width: 80%;
-    background-color: rgb(197, 211, 204);
+    width: 50%;
     margin: 0 auto;
     padding: 12px;
     margin-bottom: 20px;
@@ -39,14 +91,22 @@
     margin: 25px 0
 }
 
-.right{
+.right_comments{
     float: right;
-    margin-top: -20px;
+    margin-top: 0px;
     margin-right: 20px;
+    margin-right: 10px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
 }
 
 b{
+    border-bottom: 1px solid rgb(2, 17, 59);
+    text-transform: capitalize;
     margin-right: 5px;
-    color: #f59e42;
+    color: rgb(2, 17, 59);
 }
 

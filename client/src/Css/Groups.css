@@ -4,19 +4,31 @@
     display: flex;
 }
 
-.all_groups > li {
+/* .all_groups > li {
     color: black; 
     padding-top: 100px;
     
-}
-
+} */
+/* .group{
+    text-align: center;
+} */
 /* .group_form > input{
 background-color: black;
 color: white;
 } */
 
 .groupForm{
-    padding-top: 200px;
+   
+    padding: 100px;
+    width: 70%;
+    /* margin-top: 100px; */
+    /* border: 1px solid red; */
+   
+    
+}
+.group-list{
+    text-align: left;
+    margin-left: 50px;
 }
 
 .messages{

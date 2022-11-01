@@ -82,6 +82,7 @@ function Account({ user, userPosts }) {
 							<p className="body">
 								A post by {username}: {item.content}
 							</p>
+							
 							<div className="info">
 								<p>{item.created_at}</p>
 								<p className="right">

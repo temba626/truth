@@ -26,6 +26,9 @@ console.log(id)
         .then((data) => setData([...messages, data]));
 
         // window.location.reload(false);
+        setNewObj({
+            content: ""
+        })
     }
   return (
     <div>

@@ -3,7 +3,8 @@ class GroupsController < ApplicationController
     
     # GET /groups
     def index 
-        groups = Group.all 
+        
+        groups = Group.where.not(status: "private")
         render json: groups
     end
 
@@ -19,6 +20,16 @@ class GroupsController < ApplicationController
         user_id = session[:user_id]
         user = User.find(user_id)
         group = user.groups.create(group_params)
+        render json: group, status: :created
+    end
+    # POST /private_group
+    def private_group 
+        user_id = session[:user_id]
+        user = User.find(user_id)
+        group = user.groups.create(
+            title:params[:title],
+            status:"private",
+                )
         render json: group, status: :created
     end
 

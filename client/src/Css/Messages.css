@@ -2,8 +2,10 @@
     width: 850px;
     height: 30px;
     border: 1px solid lightgray;
-    background-color: lightgrey;
+    background-color: rgba(12, 27, 65, 0.4);
     outline: none;
+    border-radius: 10px;
+    padding-left: 10px;
 }
 
 .send{
@@ -15,9 +17,9 @@
 
 .send_sms{
     display: flex;
-    width: 70%;
+    width: 60%;
     position: absolute;
-    right: 100px;
-    bottom: 0px;
+    right: 233px;
+    bottom: -2px;
     position: fixed;
 }

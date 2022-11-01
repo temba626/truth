@@ -6,24 +6,30 @@
     display: flex;
     float: right;
     padding-left: 50px;
-    background-color: rgb(197, 211, 204);
+    background-color: rgb(238, 238, 238);
     margin-top: -10px;
     padding-top: 5px;
-    padding-left: 800px;
+    padding-left: 700px;
     z-index: 10;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);;
 }
 
 .li{
     margin-left: 20px;
-    font-weight: 500;
-    font-size: large;
-    font-weight: bold;
+    font-weight: lighter;
+    font-size: medium;
     text-transform: capitalize;
     cursor: pointer;
     color: rgb(2, 17, 59);
-    border-radius: 12px;
-    font-family: glory;
+    font-family: sans-serif;
     padding-top: 30px;
+    transition: 1s;
+    border-bottom: 2px solid transparent;
+}
+
+.li:hover{
+    color: rgba(12, 28, 69);
+    border-bottom: 2px solid rgba(12, 28, 69);
 }
 .logo{
     width: 50px;
@@ -34,3 +40,5 @@
     left: 15px;
     position: fixed;
 }
+
+

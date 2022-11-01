@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   resources :groups  
   resources :posts
   resources :messages
+  resources :adverts
 
    # Serve websocket cable requests in-process
    mount ActionCable.server => '/cable'
    
+  post  "/private_group", to: "groups#private_group"
   # resources :users
   get "/post", to: "posts#new"
 

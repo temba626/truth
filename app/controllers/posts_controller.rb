@@ -39,12 +39,8 @@ class PostsController < ApplicationController
     # DELETE /poststs/:id
     def destroy 
         post = Post.find(params[:id])
-        if post
-            post.destroy
-            head :no_content
-        else
-            render json: { errors: ["Post not found"] }, status: :not_found
-        end
+        post.destroy
+        head :no_content
     end
 
     private
@@ -54,7 +50,7 @@ class PostsController < ApplicationController
     end
 
     def post_params
-        params.permit(:title, :content  )
+        params.permit(:title, :content, :image_url  )
     end
 
 

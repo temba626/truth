@@ -1,7 +1,6 @@
 class MessageSerializer < ActiveModel::Serializer
-  attributes :id, :content
-  has_one :user
-  has_one :group
+  attributes :id, :content, :group, :user
+
   belongs_to :user
   belongs_to :group
 end
