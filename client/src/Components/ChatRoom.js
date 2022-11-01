@@ -44,9 +44,8 @@ function ChatRoom({ user }) {
 				{users.map((item) => {
 					return (
 						<div key={item.id}>
-							
 							<div className="side_users">
-								<img className="user_chat_pic" src={item.image_url}/>
+								<img className="user_chat_pic" src={item.image_url} />
 								<p>{item.name}</p>
 							</div>
 						</div>
@@ -61,6 +60,9 @@ function ChatRoom({ user }) {
 				<div></div>
 			</div>
 			<div className="message_area">
+				<div className="messageSearch">
+					<input type="text" placeholder="search message" />
+				</div>
 				{messages.map((item) => {
 					let cbodyClass =
 						item.user.id == user.id
@@ -75,6 +77,12 @@ function ChatRoom({ user }) {
 							<div className="test">
 								<li className="sms_body">{item.content}</li>
 								<li className="sender">from {item.user.name}...</li>
+								{/* <li id="all_users">
+									<div className="side_users">
+										<img className="user_chat_pic" src={item.user.image_url} />
+										<p>{item.user.name}</p>
+									</div>
+								</li> */}
 							</div>
 						</div>
 					);

@@ -8,14 +8,18 @@
   </head>
 
   <body>
-    <h1>Welcome to example.com, <%= user.name %></h1>
-    <p>
+    <%# <h1>Welcome to example.com, <%= @user.name %>
+    <%# <p>
       You have successfully signed up to example.com,
-      your username is: <%= user.login %>.<br>
-    </p>
+      your username is: <%= @user.login %>
+    <%# </p>
     <p>
       To login to the site, just follow this link: <%= url %>.
+    <%# </p>
+    <p>Thanks for joining and have a great day!</p> %> 
+    <%= yield %>
+    <p>
+    Thanks
     </p>
-    <p>Thanks for joining and have a great day!</p>
   </body>
 </html>

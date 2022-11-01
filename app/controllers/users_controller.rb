@@ -24,14 +24,20 @@ class UsersController < ApplicationController
   end
 
   def create 
-      user = User.create!(user_params)
-      user.update(status:"normal")
-      if user.valid?
-         session[:user_id] = user.id
-          render json: user, status: :created
+      @user = User.create!(user_params)
+      @user.update(status:"normal")
+      if @user.valid?
+         session[:user_id] = @user.id
+          render json: @user, status: :created
       else
-          render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+          render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
       end
+
+    #   AccountMailer.new_account(@user).deliver_now
+    #   respond_to do |format|
+    #     format.html { redirect_to @user}
+    #     format.js
+    #   end
   end
 
   private
