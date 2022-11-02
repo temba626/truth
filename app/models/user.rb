@@ -1,11 +1,11 @@
 class User < ApplicationRecord
+    has_secure_password
     include EmailValidatable
 
     validates :name, presence: true
     validates :email, presence: true, email: true 
-    validates :username, presence: true, 
+    validates :username, presence: true 
 
-    has_secure_password
 
     has_many :messages
     has_many :comments
