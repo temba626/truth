@@ -20,11 +20,13 @@ import {
 	FaYoutube,
 } from "react-icons/fa";
 import Groups from "./Groups";
+import EditPost from "./EditPost";
 
 function Account({ user, userPosts }) {
 	const [show, setShow] = useState(false);
 	const [showGroupForm, setShowGroupForm] = useState(false);
 	const [query, setQuery] = useState("");
+	const [editUi, setEditUi] = useState(false);
 
 	const { username, image_url, created_at, posts, comments, groups } = user;
 
@@ -35,6 +37,11 @@ function Account({ user, userPosts }) {
 	function handleShowGroupForm() {
 		setShowGroupForm((showGroupForm) => !showGroupForm);
 	}
+
+	function showEditUi() {
+		setEditUi((editUi) => !editUi);
+	}
+	
 
 	const addIconStyles = {
 		color: "orange",
@@ -215,13 +222,16 @@ function Account({ user, userPosts }) {
 												className="account_delete"
 												style={crudIcon}
 												size="1.2em"
+												
 											/>
 											<RiEditBoxLine
 												className="account_update"
 												style={crudIcon}
 												size="1.2em"
+												onClick={showEditUi}
 											/>
 										</div>
+										{editUi ? <EditPost onClick={showEditUi} id={item.id}/> : null}
 									</div>
 								</div>
 							</div>

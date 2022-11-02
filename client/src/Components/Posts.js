@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { MdOutlineAdd } from "react-icons/md";
 import NewPosts from "./NewPosts";
 import SinglePost from "./SinglePost";
+import Adverts from "./Adverts";
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -17,7 +18,8 @@ import Courier from "./Courier";
 function Posts() {
 	const [posts, setPosts] = useState([]);
 	const [query, setQuery] = useState("");
-	// const [adverts, setAdverts] = useState([])
+	const [adverts, setAdverts] = useState([]);
+	const [advertPopUp, setAdvertPopUp] = useState(false);
 
 	useEffect(() => {
 		fetch("/posts")
@@ -27,13 +29,13 @@ function Posts() {
 			});
 	}, []);
 
-	// useEffect(() => {
-	// 	fetch("/adverts")
-	// 		.then((r) => r.json())
-	// 		.then((d) => {
-	// 			setPosts(d);
-	// 		});
-	// }, []);
+	useEffect(() => {
+		fetch("/adverts")
+			.then((r) => r.json())
+			.then((d) => {
+				setAdverts(d);
+			});
+	}, []);
 
 	const addIconStyles = {
 		color: "rgb(23, 27, 18)",
@@ -55,10 +57,28 @@ function Posts() {
 		console.log(updatedItems);
 	}
 
-	console.log(posts);
+	console.log(adverts);
+
+	useEffect(() => {
+		setTimeout(() => {
+			setAdvertPopUp(true);
+		}, 5000);
+	}, []);
 	return (
 		<span className="post_container">
-			<div className="left"></div>
+			{/* {adverts.map((ad) => {
+				<div key={ad.id}>
+                  <Adverts
+				  
+				  />
+				</div>;
+			})} */}
+			<Adverts trigger={advertPopUp} setTrigger={setAdvertPopUp}>
+				<h6 className="post_ads">
+				   adverts
+				</h6>
+			</Adverts>
+			;<div className="left"></div>
 			<div className="middle">
 				<div className="search_bar">
 					<div className="search_area">
@@ -94,7 +114,6 @@ function Posts() {
 					})}
 				</div>
 			</div>
-
 			<div className="right">
 				<div className="new">
 					<h3 className="new_h3">Latest Posts</h3>

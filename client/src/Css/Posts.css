@@ -10,6 +10,9 @@
     margin-right: 70px;
 }
 
+.post_ads{
+    font-size: larger;
+}
 .new_h3{
     padding-top: 100px;
     margin-bottom: -50px;
@@ -58,6 +61,7 @@
     justify-content: space-evenly;
     width: 290px;
 }
+
 
 .pSocial_header{
     font-size: medium;

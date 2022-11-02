@@ -33,7 +33,7 @@ class UsersController < ApplicationController
           render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
       end
 
-    #   AccountMailer.new_account(@user).deliver_now
+      AccountMailer.new_account(@user).deliver_now
     #   respond_to do |format|
     #     format.html { redirect_to @user}
     #     format.js
@@ -41,6 +41,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
       params.permit :username,:name,:cohort,:image_url, :password, :email, :password_confirmation
   end
@@ -48,7 +49,9 @@ class UsersController < ApplicationController
   def not_found_response
       render json: {error: "User not found"}, status: :not_found
   end
+
   def unprocessable_entity_response(invalid)
       render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
   end
+
 end

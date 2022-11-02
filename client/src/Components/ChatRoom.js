@@ -23,7 +23,7 @@ function ChatRoom({ user }) {
 				setUsers(data.users);
 				// setStatus(data.status);
 			});
-	}, []);
+	}, [messages]);
 
 	const smsInput = {
 		with: "400px",
@@ -36,12 +36,27 @@ function ChatRoom({ user }) {
 	// 	<li style={{float: "left"}}>{item.content}</li>
 	// }
 
-	console.log(messages);
+	function getChatMembers (){
+		var chatmembers = []
+	
+		messages.forEach((m,i)=>{
+			let {user} = m
+	
+			let indx = chatmembers.findIndex(el => el.id == user.id)
+	
+			if(indx == -1) chatmembers.push(user)
+		})
+
+		return chatmembers
+	}
+
+
+	console.log("mesages", messages);
 	return (
 		<div className="chatroom">
 			<p className="all_users">
 				<h5>group users</h5>
-				{users.map((item) => {
+				{getChatMembers().map((item) => {
 					return (
 						<div key={item.id}>
 							<div className="side_users">
