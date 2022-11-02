@@ -19,15 +19,21 @@ import {
 	FaTwitter,
 	FaYoutube,
 } from "react-icons/fa";
+import Groups from "./Groups";
 
 function Account({ user, userPosts }) {
 	const [show, setShow] = useState(false);
+	const [showGroupForm, setShowGroupForm] = useState(false);
 	const [query, setQuery] = useState("");
 
 	const { username, image_url, created_at, posts, comments, groups } = user;
 
 	function handleShow() {
 		setShow((show) => !show);
+	}
+
+	function handleShowGroupForm() {
+		setShowGroupForm((showGroupForm) => !showGroupForm);
 	}
 
 	const addIconStyles = {
@@ -53,7 +59,8 @@ function Account({ user, userPosts }) {
 
 	const sideBarIcons ={
 		marginTop: "35px",
-		color: "gray"
+		color: "gray",
+		cursor: "pointer"
 	}
 
 	const sideBarIconsTop = {
@@ -72,9 +79,9 @@ function Account({ user, userPosts }) {
 				<div className="sideBarIcons">
 				{/* <MdOutlineMenuOpen style={sideBarIconsTop} size="3em"/>
 				<br/> */}
-				<MdOutlinePostAdd style={sideBarIcons} size="2em"/>
+				<MdOutlinePostAdd onClick={handleShow} style={sideBarIcons} size="2em"/>
 				<br/>
-				<MdGroupAdd style={sideBarIcons} size="2em"/>
+				<MdGroupAdd onClick={handleShowGroupForm} style={sideBarIcons} size="2em"/>
 				<br/>
 				<MdOutlineAccountCircle style={sideBarIcons} size="2em"/>
 				</div>
@@ -96,7 +103,9 @@ function Account({ user, userPosts }) {
 					</button>
 				</div> */}
 					<div className="profile_top">
+					{show ? <AddPost/> : null} 
 						<div className="div"></div>
+						{showGroupForm ? <Groups/> : null}
 						<div className="div_container">
 							<img className="account_profile" src={image_url} />
 							<div className="sideOf_profile">
@@ -161,8 +170,6 @@ function Account({ user, userPosts }) {
 						Add Post
 					</button>
 				</div> */}
-
-					{show ? <AddPost onClick={handleShow} /> : null}
 
 					<div className="more">
 						<h5 className="more_nav first">chat rooms</h5>

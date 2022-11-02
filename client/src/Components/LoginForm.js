@@ -45,6 +45,7 @@ function LoginForm({onLogin}) {
       
 	return (
 		<form onSubmit={handleSubmit} className="loginForm loginContainer">
+			<h3 className='lTop'>welcome Back</h3>
 			<div className='mb-3'>
 			<input
 				type="text"
@@ -61,7 +62,7 @@ function LoginForm({onLogin}) {
 				type="password"
 				id="password"
 				value={password}
-				placeholder="pasword"
+				placeholder="password"
 				className='form-control'
 				onChange={(e) => setPassword(e.target.value)}
 			/>

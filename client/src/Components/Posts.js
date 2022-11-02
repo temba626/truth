@@ -100,7 +100,7 @@ function Posts() {
 					<h3 className="new_h3">Latest Posts</h3>
 					<NewPosts />
 				</div>
-				<div>
+				<div className="postsMediaIcons">
 					<h3 className="pSocial_header">follow us</h3>
 					<div className="post_social">
 						<FaFacebookF id="face" size="0.9em" style={socialStyles} />

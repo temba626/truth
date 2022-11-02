@@ -1,19 +1,38 @@
 .addPost{
     position: absolute;
-    width: 100%;
-    background-color: rgba(50, 157, 168, 0.8);
+    width: 50%;
+    background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95));
     text-align: center;
-    padding-top: 100px;
-    height: 100vh;
-    z-index: 5;
+    padding-top: 50px;
+    height: 70vh;
+    z-index: 20;
 }
 
 .post_input{
     width: 400px;
-    height: 60px;
-    border-radius: 12px;
+    height: 30px;
+    border-radius: 5px;
     outline: none;
     border: 1px solid transparent;
     margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.post_textarea{
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.post_btn{
+    width: 100px;
+    height: 40px;
+    background-color: rgba(12, 28, 69);
+    border: none;
+    outline: none;
+    padding: 5px;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 

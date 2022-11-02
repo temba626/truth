@@ -10,7 +10,7 @@ function Groups() {
 	// App.cable = ActionCable.createConsumer(); 
 
 	const [title, setTitle] = useState("");
-	const [status, setStatus] = useState(0);
+	const [status, setStatus] = useState("");
 	const [groups, setGroups] = useState([]);
 
 	useEffect(() => {
@@ -31,6 +31,8 @@ function Groups() {
 		}).then(() => {
 			console.log("new group");
 		});
+
+		window.location.reload();
 	}
 
 	return (
@@ -38,11 +40,10 @@ function Groups() {
 			<div className="groupForm">
 				<form onSubmit={handleSubmit}>
 				<div class="mb-3">
-				<label  class="form-label">Title of group to be added</label>
 					<input
 						type="text"
 						value={title}
-						placeholder="title"
+						placeholder="group name"
 						class="form-control"
 						onChange={(e) => setTitle(e.target.value)}
 					/>

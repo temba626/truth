@@ -145,7 +145,7 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-top: 135px;
+    margin-top: 145px;
     border: 3px solid white;
     z-index: 5;
     margin-left: 30px;
@@ -175,7 +175,7 @@
 }
 
 .sideOf_profile{
-    margin-top: 110px;
+    margin-top: 130px;
     padding: 10px 30px;
     height: fit-content;
     border-radius: 15px;
@@ -205,8 +205,8 @@
 .liveUser{
     font-weight: bolder;
     position: absolute;
-    top: 230px;
-    left: 350px;
+    top: 250px;
+    left: 400px;
     width: 25px;
     height: 25px;
     background-color: green;
@@ -216,13 +216,13 @@
 
 .involved{
     display: flex;
-    margin-left: 360px;
+    margin-left: 350px;
     margin-top: 230px;
-    margin-right: 30px;
+    margin-right: 10px;
 }
 
 .p_involved{
-    margin-left: 10px;
+    margin-left: 5px;
     color: white;
 }
 
@@ -341,7 +341,7 @@
 }
 
 .account_side_left{
-    width: 250px;
+    width: 73px;
     height: 100vh;
     background-color: white;
     margin-top: -100px;
@@ -351,11 +351,11 @@
 }
 
 .account_center{
-   margin: 0 10px;
+   margin: 0 30px;
 }
 
 .account_side_right{
-    width: 250px;
+    width: 73px;
     height: 100vh;
     background-color: white;
     margin-top: -100px;

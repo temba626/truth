@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "../Css/AddPost.css"
 
-function AddPost({onClick}) {
+function AddPost() {
     const [title, setTitle] = useState('')
     const [content, setContent] = useState('')
 	const [imageUrl, setImageUrl] = useState('')
     const [errors, setErrors] = useState([])
+	
     
 
     function handleSubmit(e) {
@@ -31,12 +32,14 @@ function AddPost({onClick}) {
 			} else {
 				r.json().then((err) => setErrors(err.errors));
 			}
-
-
-            setContent('')
-            setTitle('')
-			setImageUrl('')
+           
 		});
+
+		window.location.reload();
+
+		setContent('')
+		setTitle('')
+		setImageUrl('')
 	}
 
 	return (
@@ -44,12 +47,13 @@ function AddPost({onClick}) {
 			<form onSubmit={handleSubmit}>
 				<input type="text" id="title" className="post_input" value={title} placeholder="title" onChange={(e) => setTitle(e.target.value)}/>
 
+				<br/>
+
 				<input type="text" id="imgUrl" className="post_input" value={imageUrl} placeholder="inser image" onChange={(e) => setImageUrl(e.target.value)}/>
 <br/>
-				<input type="text" id="content" className="post_input" value={content} placeholder="content" onChange={(e) => setContent(e.target.value)}/>
+				<textarea rows="7" cols="50" id="content" className="post_textarea" value={content} placeholder="content" onChange={(e) => setContent(e.target.value)}/>
 <br/>
-                <button type="submit" className="btn" >submit</button>
-                <button onClick={onClick}>X</button>
+                <button type="submit" className="post_btn" >submit</button>
 			</form>
 		</div>
 	);
