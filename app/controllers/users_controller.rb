@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   end
 
   def update_params
-    params.permit( :username, :name, :cohort, :image_url)
+    params.permit(:username, :name, :cohort, :image_url)
   end
 
   def not_found_response
