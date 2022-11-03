@@ -41,7 +41,7 @@ function Funds(params) {
 							<th>#</th>
 							<th>Name</th>
 							<th>Description</th>
-                            <th>Contributors</th>
+                           
 						</tr>
 					</thead>
 					{fundraisergroup.map((group) => {
@@ -51,14 +51,15 @@ function Funds(params) {
 									<td className="td">{group.id}</td>
 									<td className="td">{group.name}</td>
                                     <td className="td">{group.description }</td>
-                                    <td className="td"><button type="button" className="btn btn-success" onClick={()=> setpopupbut(true)} >SHOW</button></td>
-									<PopUp trigger={popupbut} settrigger={setpopupbut} id={group.id}/>
+                                    
+									
 								
 								</tr>
 							</tbody>
 						);
 					})}
 				</table>
+				
        </div>
        <div>
             <form style={{padding:"100px",width:"100%",alignItems:"right"}} onSubmit={handleSubmitfund}>
@@ -80,8 +81,11 @@ function Funds(params) {
 					</div>
 				
 					<button type="submit" class="btn btn-primary">Submit</button>
-            </form>    
+            </form>  
+			  
         </div>
+		<button type="button" className="btn btn-success"  onClick={()=> setpopupbut(true)} >CONTRIBUTORS</button>
+				<PopUp trigger={popupbut} settrigger={setpopupbut} />
 		
         </div>
     )
