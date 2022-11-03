@@ -33,7 +33,7 @@ class UsersController < ApplicationController
           render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
       end
 
-      AccountMailer.new_account(@user).deliver_now
+     # AccountMailer.new_account(@user).deliver_now
     #   respond_to do |format|
     #     format.html { redirect_to @user}
     #     format.js

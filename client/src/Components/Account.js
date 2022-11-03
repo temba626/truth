@@ -198,7 +198,7 @@ function Account({ user, userPosts }) {
 					{user.posts
 						?.filter((item) => item.content.toLowerCase().includes(query))
 						.map((item) => (
-							<div className="account_posts">
+							<div key={item.id} className="account_posts">
 								<div className="img_container">
 									<img className="account_img" src={item.image_url} />
 								</div>
@@ -231,7 +231,7 @@ function Account({ user, userPosts }) {
 												onClick={showEditUi}
 											/>
 										</div>
-										{editUi ? <EditPost onClick={showEditUi} id={item.id}/> : null}
+										{editUi ? <EditPost onClick={showEditUi}/> : null}
 									</div>
 								</div>
 							</div>

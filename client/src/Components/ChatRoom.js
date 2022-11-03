@@ -11,7 +11,7 @@ function ChatRoom({ user }) {
 
 	let { id } = useParams();
 
-	let { username, image_url } = user;
+	let { username, image_url, groups } = user;
 
 	console.log(title);
 	useEffect(() => {
@@ -23,13 +23,21 @@ function ChatRoom({ user }) {
 				setUsers(data.users);
 				// setStatus(data.status);
 			});
-	}, [messages]);
+	}, []);
 
 	const smsInput = {
 		with: "400px",
 		color: "red",
 	};
 
+	let sideNote = groups.map((group) => {
+		return<div key={group.id}>
+           <p>{group.title}</p>
+		   <p>{group.messages}</p>
+		</div>
+	})
+
+	console.log(groups)
 	// const cotion = if (user.id===item.user.id) {
 	// 	<li style={{float: "right"}}>{item.content}</li>
 	// } else {
@@ -70,9 +78,11 @@ function ChatRoom({ user }) {
 			<div className="user_p">
 				<h3 className="room_name">{title}</h3>
 				<p>
-					<img className="chat_pic" src={image_url} />
+					<img className="chat_pic" src={image_url} /> <b className="gr_username">{username}</b> 
 				</p>
-				<div></div>
+				<div>
+					{sideNote}
+				</div>
 			</div>
 			<div className="message_area">
 				<div className="messageSearch">
