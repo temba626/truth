@@ -30,9 +30,9 @@ function Account({ user, userPosts }) {
 	const [showGroupForm, setShowGroupForm] = useState(false);
 	const [query, setQuery] = useState("");
 	const [editUi, setEditUi] = useState(false);
-	const [showEditUi, setShowEditUi] = useState(false);
+	const [showEditUserUi, setShowEditUserUi] = useState(false);
 
-	const { username, image_url, created_at, posts, comments, groups, email } = user;
+	const { username, image_url, created_at, posts, comments, groups, email, id } = user;
 
 	function handleShow() {
 		setShow((show) => !show);
@@ -42,14 +42,14 @@ function Account({ user, userPosts }) {
 		setShowGroupForm((showGroupForm) => !showGroupForm);
 	}
 
-	//function showEditUi() {
-		//setEditUi((editUi) => !editUi);
-	//}
+	function showEditUi() {
+		setEditUi((editUi) => !editUi);
+	}
 
 	/*Temba's code */
 
-	function openEditUi() {
-		setShowEditUi((showEditUi) => !showEditUi)
+	function openEditUserUi() {
+		setShowEditUserUi((showEditUserUi) => !showEditUserUi)
 	}
 
 	const addIconStyles = {
@@ -126,7 +126,7 @@ function Account({ user, userPosts }) {
 							<img className="account_profile" src={image_url} />
 							<div className="sideOf_profile">
 								<h4 className="username">{username}
-									<img onClick={openEditUi} src="/edit-icon.png" style={{marginLeft: "10px"}}alt="edit icon" width="25px" height="25px"/>
+									<img onClick={openEditUserUi} src="/edit-icon.png" style={{marginLeft: "10px"}}alt="edit icon" width="25px" height="25px"/>
 								</h4>
 								<p className="createdAt">created on {created_at}</p>
 								<div className="liveUser">
@@ -202,7 +202,7 @@ function Account({ user, userPosts }) {
 						<h5 className="more_nav last">add something</h5>
 					</div>
 
-					{showEditUi ? <EditUser onClose={openEditUi} email={email}/> : null}
+					{showEditUserUi ? <EditUser onClose={openEditUserUi} id={id}/> : null}
 
 				</div>
 
