@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   def update
       user= User.find_by(id: params[:id])
-      user.update!(username: params[:username])
+      user.update!(update_params)
       render json: user, status: :accepted
   end
 
@@ -43,7 +43,11 @@ class UsersController < ApplicationController
   private
 
   def user_params
-      params.permit :username,:name,:cohort,:image_url, :password, :email, :password_confirmation
+      params.permit (:username,:name,:cohort,:image_url, :password, :email, :password_confirmation)
+  end
+
+  def update_params
+    params.permit(:username, :name, :cohort, :image_url)
   end
 
   def not_found_response
