@@ -20,7 +20,7 @@ function NewPosts() {
 							<h5 className="latest_h3">{post.title}</h5>
 							<p className="latest_p">{post.content}</p>
 						</div>
-                        <button className="latest_btn">expore</button>
+                        <button className="latest_btn">Explore</button>
 					</div>
                 </div>
 					

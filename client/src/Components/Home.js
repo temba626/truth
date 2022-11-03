@@ -31,7 +31,7 @@ function handleShow() {
 				<div className="home_bottom">
 					<div className="home_content">
 					<h1>
-						Moringa Alumni Platform <br /> a robust software engineering community
+						Moringa Connect <br /> A robust software engineering community
 						</h1>
 						<p>
 							

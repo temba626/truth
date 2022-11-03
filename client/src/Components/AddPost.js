@@ -45,13 +45,13 @@ function AddPost() {
 	return (
 		<div className="addPost">
 			<form onSubmit={handleSubmit}>
-				<input type="text" id="title" className="post_input" value={title} placeholder="title" onChange={(e) => setTitle(e.target.value)}/>
+				<input type="text" id="title" className="post_input" value={title} placeholder="Title" onChange={(e) => setTitle(e.target.value)}/>
 
 				<br/>
 
-				<input type="text" id="imgUrl" className="post_input" value={imageUrl} placeholder="inser image" onChange={(e) => setImageUrl(e.target.value)}/>
+				<input type="text" id="imgUrl" className="post_input" value={imageUrl} placeholder="Insert image" onChange={(e) => setImageUrl(e.target.value)}/>
 <br/>
-				<textarea rows="7" cols="50" id="content" className="post_textarea" value={content} placeholder="content" onChange={(e) => setContent(e.target.value)}/>
+				<textarea rows="7" cols="50" id="content" className="post_textarea" value={content} placeholder="Content" onChange={(e) => setContent(e.target.value)}/>
 <br/>
                 <button type="submit" className="post_btn" >submit</button>
 			</form>

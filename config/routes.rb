@@ -13,13 +13,14 @@ Rails.application.routes.draw do
    mount ActionCable.server => '/cable'
 
   post  "/private_group", to: "groups#private_group"
-  # resources :users
+  
   get "/post", to: "posts#new"
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
 
   get "/users", to: "users#index"
+
   patch "/users/:id", to: "users#update"
 
 
