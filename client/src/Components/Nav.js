@@ -24,30 +24,33 @@ function Nav({user, setUser}) {
 			</div>
 			<ul className="nav">
 				<NavLink className="li" to="/" style={{ textDecoration: "none" }}>
-					home
+					Home
 				</NavLink>
 				<NavLink className="li" to="/posts" style={{ textDecoration: "none" }}>
-					posts
+					Posts
 				</NavLink>
-				<NavLink className="li" to="/account" style={{ textDecoration: "none" }}>
-					account
+				<NavLink className="li" to="/groups" style={{ textDecoration: "none" }}>
+					Groups
 				</NavLink>
 				<NavLink className="li" to="/funds" style={{ textDecoration: "none" }}>
-					fundraisers
+					Fundraisers
+				</NavLink>
+				<NavLink className="li" to="/account" style={{ textDecoration: "none" }}>
+					Account
 				</NavLink>
 				<NavLink className="li" to="/about" style={{ textDecoration: "none" }}>
-					about
+					About
 				</NavLink>
 				{/* <NavLink className="li" to="/admin" style={{ textDecoration: "none" }}>
 					admin
 				</NavLink> */}
-				<NavLink
+				{/* <NavLink
 					className="li"
 					to="contacts"
 					style={{ textDecoration: "none" }}
 				>
-					contact us
-				</NavLink>
+					Contact us
+				</NavLink> */}
                 <NavLink onClick={handleLogoutClick} className="li" style={{ textDecoration: "none" }}>
 					Logout
 				</NavLink>

@@ -117,7 +117,7 @@ function Account({ user, userPosts }) {
 							<img className="account_profile" src={image_url} />
 							<div className="sideOf_profile">
 								<h4 className="username">{username}</h4>
-								<p className="createdAt">created on {created_at}</p>
+								<p className="createdAt">Created on {created_at}</p>
 								<div className="liveUser">
 									<AiOutlineCheck size="1.5em" />
 								</div>
@@ -179,12 +179,12 @@ function Account({ user, userPosts }) {
 				</div> */}
 
 					{/* <div className="more">
-						<h5 className="more_nav first">chat rooms</h5>
-						<h5 className="more_nav">posts</h5>
-						<h5 className="more_nav">comments</h5>
-						<h5 className="more_nav">fundraisers</h5>
-						<h5 className="more_nav">premium membership</h5>
-						<h5 className="more_nav ">adverts</h5>
+						<h5 className="more_nav first">Chat rooms</h5>
+						<h5 className="more_nav">Posts</h5>
+						<h5 className="more_nav">Comments</h5>
+						<h5 className="more_nav">Fundraisers</h5>
+						<h5 className="more_nav">Premium membership</h5>
+						<h5 className="more_nav ">Adverts</h5>
 						<h5 className="more_nav ">add something</h5>
 						<h5 className="more_nav last">add something</h5>
 					</div> */}
