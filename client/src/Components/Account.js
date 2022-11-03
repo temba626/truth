@@ -3,6 +3,9 @@ import "../Css/Account.css";
 import React, { useState } from "react";
 
 import AddPost from "./AddPost";
+//Temba down
+import EditUser from "./EditUser";
+
 import Admin from "./Admin";
 import Moment from "moment";
 import { FaComments } from "react-icons/fa";
@@ -27,8 +30,9 @@ function Account({ user, userPosts }) {
 	const [showGroupForm, setShowGroupForm] = useState(false);
 	const [query, setQuery] = useState("");
 	const [editUi, setEditUi] = useState(false);
+	const [showEditUserUi, setShowEditUserUi] = useState(false);
 
-	const { username, image_url, created_at, posts, comments, groups } = user;
+	const { username, image_url, created_at, posts, comments, groups, email, id } = user;
 
 	function handleShow() {
 		setShow((show) => !show);
@@ -41,7 +45,12 @@ function Account({ user, userPosts }) {
 	function showEditUi() {
 		setEditUi((editUi) => !editUi);
 	}
-	
+
+	/*Temba's code */
+
+	function openEditUserUi() {
+		setShowEditUserUi((showEditUserUi) => !showEditUserUi)
+	}
 
 	const addIconStyles = {
 		color: "orange",
@@ -110,13 +119,15 @@ function Account({ user, userPosts }) {
 					</button>
 				</div> */}
 					<div className="profile_top">
-					{show ? <AddPost/> : null} 
+					{show ? <AddPost/> : null}
 						<div className="div"></div>
 						{showGroupForm ? <Groups/> : null}
 						<div className="div_container">
 							<img className="account_profile" src={image_url} />
 							<div className="sideOf_profile">
-								<h4 className="username">{username}</h4>
+								<h4 className="username">{username}
+									<img onClick={openEditUserUi} src="/edit-icon.png" style={{marginLeft: "10px"}}alt="edit icon" width="25px" height="25px"/>
+								</h4>
 								<p className="createdAt">Created on {created_at}</p>
 								<div className="liveUser">
 									<AiOutlineCheck size="1.5em" />
@@ -178,16 +189,20 @@ function Account({ user, userPosts }) {
 					</button>
 				</div> */}
 
-					{/* <div className="more">
-						<h5 className="more_nav first">Chat rooms</h5>
-						<h5 className="more_nav">Posts</h5>
-						<h5 className="more_nav">Comments</h5>
-						<h5 className="more_nav">Fundraisers</h5>
-						<h5 className="more_nav">Premium membership</h5>
-						<h5 className="more_nav ">Adverts</h5>
-						<h5 className="more_nav ">add something</h5>
-						<h5 className="more_nav last">add something</h5>
-					</div> */}
+					{show ? <AddPost onClick={handleShow} /> : null}
+              {/* <div className="more">
+              <h5 className="more_nav first">Chat rooms</h5>
+              <h5 className="more_nav">Posts</h5>
+              <h5 className="more_nav">Comments</h5>
+              <h5 className="more_nav">Fundraisers</h5>
+              <h5 className="more_nav">Premium membership</h5>
+              <h5 className="more_nav ">Adverts</h5>
+              <h5 className="more_nav ">add something</h5>
+              <h5 className="more_nav last">add something</h5>
+            </div> */}
+					{showEditUserUi ? <EditUser onClose={openEditUserUi} id={id}/> : null}
+
+
 				</div>
 
 				<div className="account_center">
@@ -222,7 +237,7 @@ function Account({ user, userPosts }) {
 												className="account_delete"
 												style={crudIcon}
 												size="1.2em"
-												
+
 											/>
 											<RiEditBoxLine
 												className="account_update"
@@ -231,7 +246,7 @@ function Account({ user, userPosts }) {
 												onClick={showEditUi}
 											/>
 										</div>
-										{editUi ? <EditPost onClick={showEditUi}/> : null}
+
 									</div>
 								</div>
 							</div>

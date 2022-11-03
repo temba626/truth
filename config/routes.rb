@@ -1,26 +1,27 @@
 Rails.application.routes.draw do
-  
+
   resources :contributors
   resources :fundarisergroups
   resources :user_groups, only: [:index, :show, :create]
-  resources :groups  
+  resources :groups
   resources :posts
   resources :messages
   resources :adverts
-   resources :users
+  # resources :users
 
    # Serve websocket cable requests in-process
    mount ActionCable.server => '/cable'
-   
+
   post  "/private_group", to: "groups#private_group"
-  # resources :users
+  
   get "/post", to: "posts#new"
 
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
 
   get "/users", to: "users#index"
-  put "/users/:id", to: "users#update"
+
+  patch "/users/:id", to: "users#update"
 
 
   post "/login", to: "sessions#create"
