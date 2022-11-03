@@ -80,8 +80,9 @@ function ChatRoom({ user }) {
 				<p>
 					<img className="chat_pic" src={image_url} /> <b className="gr_username">{username}</b> 
 				</p>
-				<div>
-					{sideNote}
+				<div className="sideNote">
+					<h3>chatrooms</h3>
+					<p>{sideNote}</p>
 				</div>
 			</div>
 			<div className="message_area">

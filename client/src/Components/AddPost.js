@@ -49,7 +49,7 @@ function AddPost() {
 
 				<br/>
 
-				<input type="text" id="imgUrl" className="post_input" value={imageUrl} placeholder="inser image" onChange={(e) => setImageUrl(e.target.value)}/>
+				<input type="text" id="imgUrl" className="post_input" value={imageUrl} placeholder="insert image" onChange={(e) => setImageUrl(e.target.value)}/>
 <br/>
 				<textarea rows="7" cols="50" id="content" className="post_textarea" value={content} placeholder="content" onChange={(e) => setContent(e.target.value)}/>
 <br/>

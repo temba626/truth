@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :messages
   resources :adverts
-  # resources :users
+   resources :users
 
    # Serve websocket cable requests in-process
    mount ActionCable.server => '/cable'

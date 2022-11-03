@@ -29,12 +29,12 @@ function Nav({user, setUser}) {
 				<NavLink className="li" to="/posts" style={{ textDecoration: "none" }}>
 					posts
 				</NavLink>
-				{/* <NavLink className="li" to="/groups" style={{ textDecoration: "none" }}>
-					groups
-				</NavLink> */}
-				{/* <NavLink className="li" to="/funds" style={{ textDecoration: "none" }}>
+				<NavLink className="li" to="/account" style={{ textDecoration: "none" }}>
+					account
+				</NavLink>
+				<NavLink className="li" to="/funds" style={{ textDecoration: "none" }}>
 					fundraisers
-				</NavLink> */}
+				</NavLink>
 				<NavLink className="li" to="/about" style={{ textDecoration: "none" }}>
 					about
 				</NavLink>
