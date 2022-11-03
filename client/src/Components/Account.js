@@ -178,7 +178,7 @@ function Account({ user, userPosts }) {
 					</button>
 				</div> */}
 
-					<div className="more">
+					{/* <div className="more">
 						<h5 className="more_nav first">Chat rooms</h5>
 						<h5 className="more_nav">Posts</h5>
 						<h5 className="more_nav">Comments</h5>
@@ -187,7 +187,7 @@ function Account({ user, userPosts }) {
 						<h5 className="more_nav ">Adverts</h5>
 						<h5 className="more_nav ">add something</h5>
 						<h5 className="more_nav last">add something</h5>
-					</div>
+					</div> */}
 				</div>
 
 				<div className="account_center">

@@ -35,6 +35,9 @@ function Nav({user, setUser}) {
 				<NavLink className="li" to="/funds" style={{ textDecoration: "none" }}>
 					Fundraisers
 				</NavLink>
+				<NavLink className="li" to="/account" style={{ textDecoration: "none" }}>
+					Account
+				</NavLink>
 				<NavLink className="li" to="/about" style={{ textDecoration: "none" }}>
 					About
 				</NavLink>
