@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :messages
   resources :adverts
-  resources :users
+  # resources :users
 
    # Serve websocket cable requests in-process
    mount ActionCable.server => '/cable'
@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   get "/me", to: "users#show"
 
-  # get "/users", to: "users#index"
+  get "/users", to: "users#index"
+  put "/users/:id", to: "users#update"
 
 
   post "/login", to: "sessions#create"
