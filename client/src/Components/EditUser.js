@@ -1,13 +1,43 @@
 import React, { useState } from "react";
 
-function EditUser({onClose, email}) {
+function EditUser({onClose, id}) {
 
     const [username, setUsername] = useState('');
     const [imageUrl, setImageUrl] = useState('');
+    const [errors, setErrors] = useState([])
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault();
+		setErrors([]);
+		fetch(`/users/${id}`, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				username: username,
+				image_url: imageUrl
+			}),
+
+		}).then((r) => {
+			if (r.ok) {
+				r.json().then((post) => {
+                    setUsername(post.username)
+                    setImageUrl(post.imageUrl)
+                });
+			} else {
+				r.json().then((err) => setErrors(err.errors));
+			}
+
+            window.location.reload(false);
+
+            // setContent('')
+            // setTitle('')
+		});
+
 
     }
+    //console.log(id)
 
     return (
         <form onSubmit={handleSubmit}>
