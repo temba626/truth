@@ -3,9 +3,19 @@
     left: 500px;
     top: 120px;
     z-index: 16;
+    background-color: white;
+    height: 400px;
+    border-radius: 12px;
 }
 
-
+.lSignUp{
+    height: 620px;
+    background-color: white;
+    padding: 70px;
+    margin-top: -115px;
+    border-radius: 12px;
+    border: 1px solid gray;
+}
 
 .access_btn{
     color: #f59e42;
@@ -13,9 +23,20 @@
     border: none;
     outline: none;
     font-size: medium;
+    margin-left: 10px;
 }
 
  em {
     color: rgb(4, 4, 29);
     font-weight: bold;
+}
+
+.Ld{
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+.Sd{
+    margin-top: 140px;
+    margin-left: 40px;
 }

@@ -55,7 +55,7 @@ class PostsController < ApplicationController
 
 
     def update_params
-        params.permit(:title)
+        params.permit(:title, :content)
     end
     def authorize
         return render json: {errors: ["Unauthorized"]}, status: :unauthorized unless session[:user_id]

@@ -11,7 +11,7 @@ function ChatRoom({ user }) {
 
 	let { id } = useParams();
 
-	let { username, image_url } = user;
+	let { username, image_url, groups } = user;
 
 	console.log(title);
 	useEffect(() => {
@@ -30,18 +30,41 @@ function ChatRoom({ user }) {
 		color: "red",
 	};
 
+	let sideNote = groups.map((group) => {
+		return<div key={group.id}>
+           <p>{group.title}</p>
+		   <p>{group.messages}</p>
+		</div>
+	})
+
+	console.log(groups)
 	// const cotion = if (user.id===item.user.id) {
 	// 	<li style={{float: "right"}}>{item.content}</li>
 	// } else {
 	// 	<li style={{float: "left"}}>{item.content}</li>
 	// }
 
-	console.log(messages);
+	function getChatMembers (){
+		var chatmembers = []
+	
+		messages.forEach((m,i)=>{
+			let {user} = m
+	
+			let indx = chatmembers.findIndex(el => el.id == user.id)
+	
+			if(indx == -1) chatmembers.push(user)
+		})
+
+		return chatmembers
+	}
+
+
+	console.log("mesages", messages);
 	return (
 		<div className="chatroom">
 			<p className="all_users">
 				<h5>group users</h5>
-				{users.map((item) => {
+				{getChatMembers().map((item) => {
 					return (
 						<div key={item.id}>
 							<div className="side_users">
@@ -55,9 +78,11 @@ function ChatRoom({ user }) {
 			<div className="user_p">
 				<h3 className="room_name">{title}</h3>
 				<p>
-					<img className="chat_pic" src={image_url} />
+					<img className="chat_pic" src={image_url} /> <b className="gr_username">{username}</b> 
 				</p>
-				<div></div>
+				<div>
+					{sideNote}
+				</div>
 			</div>
 			<div className="message_area">
 				<div className="messageSearch">

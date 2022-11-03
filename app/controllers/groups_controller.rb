@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
     def index 
         
         groups = Group.where.not(status: "private")
-        render json: groups
+        render json: groups, include: ["messages"]
     end
 
     # GET /groups/:id

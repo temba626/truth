@@ -7,9 +7,12 @@
 }
 
 .right{
-    margin-right: 30px;
+    margin-right: 70px;
 }
 
+.post_ads{
+    font-size: larger;
+}
 .new_h3{
     padding-top: 100px;
     margin-bottom: -50px;
@@ -56,19 +59,21 @@
 .post_social{
     display: flex;
     justify-content: space-evenly;
-    margin-top: -130px;
-    margin-bottom: 30px;
     width: 290px;
 }
 
+
 .pSocial_header{
-    position: absolute;
-    top: 450px;
-    right: 233px;
     font-size: medium;
     text-transform: capitalize;
     font-family: sans-serif;
     font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.postsMediaIcons{
+    margin-bottom: 40px;
 }
 
 #face{

@@ -17,9 +17,15 @@
 }
 
 .loginContainer{
-    background-color: rgba(50, 157, 168, 0.5);
+    background-color: white;
     height: 200px;
-    padding: 30px;
-    padding-top: 60px;
+    padding: 60px;
     border-radius: 12px;
+}
+
+.lTop{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 40px;
 }

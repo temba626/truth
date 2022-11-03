@@ -48,6 +48,7 @@ function SignUpForm({ onLogin }) {
 	return (
 		<div>
 			<form onSubmit={handleSubmit} className="signUpForm signUpContainer">
+				<h3 className="sTop">sign up</h3>
 				<input
 					type="text"
 					id="username"

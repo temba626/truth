@@ -1,8 +1,4 @@
-.group_container{
-    width: 400px;
-    height: 100vh;
-    display: flex;
-}
+
 
 /* .all_groups > li {
     color: black; 
@@ -17,14 +13,9 @@ background-color: black;
 color: white;
 } */
 
-.groupForm{
-   
-    padding: 100px;
-    width: 70%;
-    /* margin-top: 100px; */
-    /* border: 1px solid red; */
-   
-    
+.form-control{
+    width: 400px;
+    background-color: lightgray;
 }
 .group-list{
     text-align: left;
@@ -36,4 +27,18 @@ color: white;
     left: 300px;
     top: 400px;
     height: 700px;
+}
+
+.group{
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    height: 400px;
+    position: absolute;
+    z-index: 30;
+}
+
+ol{
+    height: 100px;
+    overflow: auto;
 }
