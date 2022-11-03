@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :contributors
+  resources :fundarisergroups
   resources :user_groups, only: [:index, :show, :create]
   resources :groups  
   resources :posts

@@ -71,7 +71,7 @@ function Admin({ user }) {
 				<h4>manage</h4>
 				<ul>
 					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}>advert</button></li>
-					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}>fundraiser</button></li>
+					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}} onClick={handlecreate}>fundraiser</button></li>
 					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}} onClick={handlecreate}>create private group</button></li>
 					<li><button type="submit" class="btn btn-primary" style={{width:"100%"}}>delete group</button></li>
 					<li> <button type="submit" class="btn btn-primary" style={{width:"100%"}}>update user</button></li>
