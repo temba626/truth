@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
+
+import PopUp from "./PopUp";
+
 function Funds(params) {
     const [name,setName]=useState("");
     const [amount,setAmount]=useState(0);
     const [fundraisergroupid,setfundraisergroupid]=useState(0);
     const [fundraisergroup,setfundarisergroup]=useState([]);
+	const [popupbut,setpopupbut]=useState(false);
     
     
     useEffect(() => {
@@ -47,12 +51,8 @@ function Funds(params) {
 									<td className="td">{group.id}</td>
 									<td className="td">{group.name}</td>
                                     <td className="td">{group.description }</td>
-                                    <td className="td">
-                                    <button type="button" className="btn btn-success" >
-											SHOW
-										</button>
-                                    </td>
-                                    
+                                    <td className="td"><button type="button" className="btn btn-success" onClick={()=> setpopupbut(true)} >SHOW</button></td>
+									<PopUp trigger={popupbut} settrigger={setpopupbut} id={group.id}/>
 								
 								</tr>
 							</tbody>
@@ -82,6 +82,7 @@ function Funds(params) {
 					<button type="submit" class="btn btn-primary">Submit</button>
             </form>    
         </div>
+		
         </div>
     )
 }

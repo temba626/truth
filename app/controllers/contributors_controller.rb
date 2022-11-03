@@ -6,6 +6,11 @@ class ContributorsController < ApplicationController
        contributors =Contributor.all
         render json:contributors
     end
+     # GET /ConContributors
+     def show
+        contributors =Contributor.where(fundraisergroupid:params[:id])
+         render json:contributors
+     end
 
     
     # POST /ConContributors
