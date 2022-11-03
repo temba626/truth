@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       render json: user, status: :accepted
   end
 
-  def create 
+  def create
       @user = User.create!(user_params)
       @user.update(status:"normal")
       if @user.valid?
@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-      params.permit (:username,:name,:cohort,:image_url, :password, :email, :password_confirmation)
+      params.permit(:username, :name, :cohort,:image_url, :password, :email, :password_confirmation)
   end
 
   def update_params
