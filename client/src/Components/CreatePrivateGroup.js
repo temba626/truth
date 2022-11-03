@@ -52,7 +52,7 @@ function CreatePrivateGroup(params) {
 
     return(
 		 <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap" }}>
-			<div>
+			<div >
 				<form style={{padding:"100px",width:"100%"}} onSubmit={handleSubmit}>
 					<h2>Add private group below</h2>
 					<div class="mb-3">
