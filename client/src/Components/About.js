@@ -4,7 +4,7 @@ import VMC from "./Vmc";
 const About = () => {
     return (
         <div>
-            <section className="py-4 bg-info">
+            <section className="py-4 bg-secondary">
                 <div className="container" style={{padding:"100px"}}>
                     <div className="row">
                         <div className="col-md-4 my-auto">

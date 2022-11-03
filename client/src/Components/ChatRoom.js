@@ -23,7 +23,7 @@ function ChatRoom({ user }) {
 				setUsers(data.users);
 				// setStatus(data.status);
 			});
-	}, []);
+	}, [messages]);
 
 	const smsInput = {
 		with: "400px",
