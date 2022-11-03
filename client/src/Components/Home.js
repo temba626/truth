@@ -30,24 +30,19 @@ function handleShow() {
 				}
 				<div className="home_bottom">
 					<div className="home_content">
-						<h1>
-							kick start your dreams <br /> with us at map
+					<h1>
+						Moringa Alumni Platform <br /> a robust software engineering community
 						</h1>
 						<p>
-							Figma image overlay can come in handy when trying to put text on top
-							of an image.
-							<br /> Figma image tricks and trips. Design well Figma image overlay
-							can come in handy when trying <br />
-							to put text on top of an image. Figma image tricks and trips. Design
-							well ...
+							
+						<br /> Explore and share new ideas in the tech world while networking
+						 with the best of the best from moringa pool of software engineers.
+							
 						</p>
 					</div>
 
 					<div className="home_btn">
-						<button className="signup" onClick={handleShow}>Signup</button>
-						<button className="login" onClick={handleShow}>login</button>
-						
-						
+						<button className="login" onClick={handleShow}>get started</button>
 					</div>
 					<div className="home_top home_flex">
 						<div className=" inner_hf">

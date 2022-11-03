@@ -10,16 +10,22 @@
     width: 350px;
     height: 35px;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: none;
     outline: none;
     background-color: lightgray;
 }
 
 .signUpContainer{
-    background-color: rgba(50, 157, 168, 0.5);
+    background-color: white;
     height: 400px;
-    padding: 30px;
-    padding-top: 40px;
+    padding: 40px;
     border-radius: 12px;
+    margin-top: -40px;
+}
+
+.sTop{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: -40px;
 }
