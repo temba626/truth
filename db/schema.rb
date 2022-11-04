@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2022_11_02_095150) do
 
   create_table "groups", force: :cascade do |t|
     t.string "title"
-    t.string "status", default: "public", null: false
+    t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 2022_11_02_095150) do
     t.string "name"
     t.string "email"
     t.string "username"
-    t.string "status", default: "normal", null: false
+    t.integer "status"
     t.string "cohort"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

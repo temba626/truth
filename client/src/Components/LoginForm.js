@@ -35,14 +35,16 @@ function LoginForm({onLogin}) {
 					// } else {
 					// 	navigate("/account");
 					// }
-			
-          } 
+
+          }
 		  else {
             r.json().then((err) => setErrors(err.errors));
           }
+		 //Added code for testing
+		  console.log(r)
         });
       }
-      
+
 	return (
 		<form onSubmit={handleSubmit} className="loginForm loginContainer">
 			<h3 className='lTop'>welcome Back</h3>
@@ -76,7 +78,7 @@ function LoginForm({onLogin}) {
 				{errors.map((err) => (
 					<li key={err}>{err}</li>
 				))}
-			
+
 			</div>
 		</form>
 	);
