@@ -1,6 +1,7 @@
 import React from "react";
 import VMC from "./Vmc";
 
+
 const About = () => {
     return (
         <div>
